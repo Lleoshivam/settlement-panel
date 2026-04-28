@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200">
+
+  <!-- ── COURTHOUSE BUILDING ── -->
+
+  <!-- Pediment (triangle) -->
+  <polygon points="18,58 82,12 146,58" fill="#2e7d32"/>
+
+  <!-- Oculus circle at apex -->
+  <circle cx="82" cy="28" r="8" fill="white"/>
+  <circle cx="82" cy="28" r="4" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+
+  <!-- Architrave (horizontal band) -->
+  <rect x="18" y="58" width="128" height="11" rx="0" fill="#2e7d32"/>
+
+  <!-- Left pillar -->
+  <rect x="28" y="69" width="26" height="52" fill="#2e7d32"/>
+
+  <!-- Right pillar -->
+  <rect x="110" y="69" width="26" height="52" fill="#2e7d32"/>
+
+  <!-- Building base -->
+  <rect x="18" y="121" width="128" height="10" fill="#2e7d32"/>
+
+  <!-- Platform step (wider) -->
+  <rect x="10" y="131" width="144" height="10" fill="#2e7d32"/>
+
+  <!-- ── DOCUMENT (overlapping right side of building) ── -->
+
+  <!-- Document body -->
+  <rect x="114" y="44" width="74" height="97" rx="5" fill="white" stroke="#2e7d32" stroke-width="2.5"/>
+
+  <!-- Dog-ear fold top-right -->
+  <path d="M164,44 L188,44 L188,64 Z" fill="#c8e6c9"/>
+  <path d="M164,44 L164,64 L188,64" fill="none" stroke="#2e7d32" stroke-width="1.5"/>
+
+  <!-- Document text lines -->
+  <line x1="124" y1="76" x2="178" y2="76" stroke="#c8c8c8" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="124" y1="87" x2="178" y2="87" stroke="#c8c8c8" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="124" y1="98" x2="162" y2="98" stroke="#c8c8c8" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Signature wavy line -->
+  <path d="M124,114 Q130,109 136,114 Q142,119 148,114 Q152,111 156,113"
+        stroke="#aaa" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Green checkmark circle (bottom-right corner of document) -->
+  <circle cx="176" cy="129" r="12" fill="#2e7d32"/>
+  <polyline points="170,129 175,134 183,122"
+            stroke="white" stroke-width="2.2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ── TEXT ── -->
+
+  <!-- SETTLEMENT PANEL -->
+  <text x="130" y="161"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="900"
+        font-size="19.5"
+        fill="#152015"
+        letter-spacing="1.2">SETTLEMENT PANEL</text>
+
+  <!-- Tagline: lines + text -->
+  <line x1="12"  y1="174" x2="54"  y2="174" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="130" y="177"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="7.8"
+        fill="#2e7d32"
+        letter-spacing="2.8">SETTLEMENT SIMPLIFIED</text>
+  <line x1="206" y1="174" x2="248" y2="174" stroke="#2e7d32" stroke-width="1.5"/>
+
+</svg>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SettleSure – Trusted Advocates for Your Debt Relief</title>
+    <title>Settlement Panel – Settlement Simplified</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -22,9 +22,12 @@
       }
 
       :root {
-        --primary: #1a6ef5;
-        --primary-dark: #1557d4;
-        --primary-light: #e8f0fe;
+        --primary: #2e7d32;
+        --primary-dark: #1b5e20;
+        --primary-light: #e8f5e9;
+        --secondary: #1a3a6e;
+        --secondary-dark: #0f2348;
+        --secondary-light: #e8edf8;
         --accent: #25d366;
         --contact-button: #12b561;
         --accent-dark: #1ebe5b;
@@ -32,11 +35,11 @@
         --text-mid: #3d4f6e;
         --text-light: #6b7a9a;
         --border: #e2e8f0;
-        --bg-light: #f5f8ff;
+        --bg-light: #f4f7fb;
         --white: #ffffff;
-        --shadow-sm: 0 2px 8px rgba(26, 110, 245, 0.08);
-        --shadow-md: 0 8px 32px rgba(26, 110, 245, 0.12);
-        --shadow-lg: 0 16px 48px rgba(26, 110, 245, 0.16);
+        --shadow-sm: 0 2px 8px rgba(26, 58, 110, 0.08);
+        --shadow-md: 0 8px 32px rgba(26, 58, 110, 0.12);
+        --shadow-lg: 0 16px 48px rgba(26, 58, 110, 0.16);
         --radius: 16px;
         --radius-sm: 10px;
       }
@@ -60,7 +63,7 @@
         backdrop-filter: blur(12px);
         border-bottom: 1px solid var(--border);
         padding: 0 5%;
-        height: 68px;
+        height: 84px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -68,24 +71,7 @@
       .nav-logo {
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-weight: 800;
-        font-size: 1.25rem;
-        color: var(--primary);
         text-decoration: none;
-      }
-      .nav-logo .logo-icon {
-        width: 38px;
-        height: 38px;
-        background: var(--primary);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .nav-logo .logo-icon i {
-        color: white;
-        font-size: 1rem;
       }
       .nav-links {
         display: flex;
@@ -101,10 +87,10 @@
         transition: color 0.2s;
       }
       .nav-links a:hover {
-        color: var(--primary);
+        color: var(--secondary);
       }
       .nav-cta {
-        background: var(--primary);
+        background: var(--secondary);
         color: white;
         padding: 10px 22px;
         border-radius: 8px;
@@ -116,7 +102,7 @@
           transform 0.2s;
       }
       .nav-cta:hover {
-        background: var(--primary-dark);
+        background: var(--secondary-dark);
         transform: translateY(-1px);
       }
       .hamburger {
@@ -138,7 +124,7 @@
 
       /* ─── HERO ─── */
       .hero {
-        background: #f8fbff;
+        background: #f4f7fb;
         padding: 80px 5% 60px;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -216,7 +202,7 @@
         border-radius: 50px;
         font-size: 0.78rem;
         font-weight: 600;
-        color: var(--primary);
+        color: var(--secondary);
         margin-bottom: 20px;
         box-shadow: var(--shadow-sm);
       }
@@ -273,12 +259,12 @@
         border: none;
         cursor: pointer;
         transition: all 0.25s;
-        box-shadow: 0 4px 16px rgba(26, 110, 245, 0.3);
+        box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
       }
       .btn-primary:hover {
         background: var(--primary-dark);
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(26, 110, 245, 0.4);
+        box-shadow: 0 8px 24px rgba(46, 125, 50, 0.4);
       }
       .btn-whatsapp {
         display: inline-flex;
@@ -317,7 +303,7 @@
         color: var(--text-mid);
       }
       .trust-item i {
-        color: var(--primary);
+        color: var(--secondary);
         font-size: 1rem;
       }
 
@@ -336,7 +322,7 @@
         width: 86%;
         border-radius: 24px;
         overflow: hidden;
-        box-shadow: 0 20px 56px rgba(26, 110, 245, 0.16);
+        box-shadow: 0 20px 56px rgba(26, 58, 110, 0.16);
         transform: rotate(4deg);
         z-index: 1;
         transform-origin: top right;
@@ -355,7 +341,7 @@
         background: white;
         border-radius: 20px;
         padding: 22px 22px 18px;
-        box-shadow: 0 16px 48px rgba(26, 110, 245, 0.2);
+        box-shadow: 0 16px 48px rgba(26, 58, 110, 0.2);
         transform: rotate(-4deg);
         transform-origin: bottom left;
         z-index: 2;
@@ -363,7 +349,7 @@
       .hero-card-main .card-icon {
         width: 48px;
         height: 48px;
-        background: var(--primary-light);
+        background: var(--secondary-light);
         border-radius: 12px;
         display: flex;
         align-items: center;
@@ -372,7 +358,7 @@
       }
       .hero-card-main .card-icon i {
         font-size: 1.4rem;
-        color: var(--primary);
+        color: var(--secondary);
       }
       .hero-card-main h3 {
         font-size: 0.95rem;
@@ -393,7 +379,7 @@
       }
       .hero-card-main .progress-fill {
         height: 7px;
-        background: linear-gradient(90deg, var(--primary), #60a5fa);
+        background: linear-gradient(90deg, var(--secondary), #2a5298);
         border-radius: 50px;
       }
       .hero-card-main .progress-label {
@@ -458,8 +444,8 @@
       }
       .section-tag {
         display: inline-block;
-        background: var(--primary-light);
-        color: var(--primary);
+        background: var(--secondary-light);
+        color: var(--secondary);
         font-size: 0.78rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -511,7 +497,7 @@
         }
       }
       .service-card {
-        background: #eef2fb;
+        background: #eef2fa;
         border-radius: 20px;
         overflow: hidden;
         display: flex;
@@ -568,7 +554,7 @@
         bottom: 40px;
         left: -40%;
         right: -40%;
-        background: #dce8fb;
+        background: #dce7f5;
         border-radius: 50%;
         z-index: 0;
       }
@@ -598,7 +584,7 @@
         background: white;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 2px 12px rgba(26, 110, 245, 0.08);
+        box-shadow: 0 2px 12px rgba(26, 58, 110, 0.08);
         transition:
           transform 0.3s,
           box-shadow 0.3s;
@@ -612,7 +598,7 @@
       .step-img {
         width: 100%;
         aspect-ratio: 4/3;
-        background: #eef3fb;
+        background: #eef2fa;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -632,7 +618,7 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-        color: #a0b4d8;
+        color: #81c784;
         font-size: 0.75rem;
         text-align: center;
         padding: 12px;
@@ -653,14 +639,14 @@
         height: 40px;
         min-width: 40px;
         border-radius: 50%;
-        background: var(--primary);
+        background: var(--secondary);
         color: white;
         font-size: 1.05rem;
         font-weight: 800;
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 4px 12px rgba(26, 110, 245, 0.35);
+        box-shadow: 0 4px 12px rgba(26, 58, 110, 0.35);
       }
       .step-card h3 {
         font-size: 0.92rem;
@@ -680,7 +666,7 @@
         border-radius: 50px;
         padding: 14px 32px;
         margin-top: 36px;
-        box-shadow: 0 2px 16px rgba(26, 110, 245, 0.1);
+        box-shadow: 0 2px 16px rgba(26, 58, 110, 0.1);
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
@@ -701,12 +687,12 @@
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        background: var(--primary-light);
+        background: var(--secondary-light);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 0.7rem;
-        color: var(--primary);
+        color: var(--secondary);
       }
       @media (max-width: 640px) {
         .hiw-trust {
@@ -752,12 +738,12 @@
         width: 44px;
         height: 44px;
         border-radius: 12px;
-        background: var(--primary-light);
+        background: var(--secondary-light);
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.1rem;
-        color: var(--primary);
+        color: var(--secondary);
         margin-bottom: 14px;
       }
       .why-card h4 {
@@ -771,7 +757,7 @@
         line-height: 1.6;
       }
       .why-visual {
-        background: linear-gradient(135deg, #1a6ef5, #0891b2);
+        background: linear-gradient(135deg, #2e7d32, #1a3a6e);
         border-radius: 24px;
         padding: 40px;
         color: white;
@@ -974,7 +960,7 @@
         padding: 0 20px 18px;
       }
       .faq-cta {
-        background: linear-gradient(135deg, #f0f5ff, #e8f0fe);
+        background: linear-gradient(135deg, #f0f4fb, #e8edf8);
         border-radius: 20px;
         padding: 40px;
         text-align: center;
@@ -994,7 +980,7 @@
 
       /* ─── FINAL CTA ─── */
       .final-cta {
-        background: linear-gradient(135deg, #0f1f3d 0%, #1a3a6e 100%);
+        background: linear-gradient(135deg, #0f2348 0%, #1a3a6e 100%);
         padding: 80px 5%;
         text-align: center;
         color: white;
@@ -1092,8 +1078,8 @@
         align-items: center;
         gap: 8px;
       }
-      .footer-brand .logo i {
-        color: var(--primary);
+      .footer-brand .logo img {
+        display: block;
       }
       .footer-brand p {
         font-size: 0.85rem;
@@ -1180,7 +1166,7 @@
 
       /* ─── TRUST BAR ─── */
       .trust-bar {
-        background: var(--primary);
+        background: var(--secondary);
         padding: 16px 5%;
         display: flex;
         justify-content: center;
@@ -1252,7 +1238,7 @@
       .mobile-menu {
         display: none;
         position: fixed;
-        top: 68px;
+        top: 84px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -1279,8 +1265,7 @@
     <!-- NAVBAR -->
     <nav>
       <a href="#" class="nav-logo">
-        <div class="logo-icon"><i class="fas fa-balance-scale"></i></div>
-        SettleSure
+        <img src="assets/logo.svg" alt="Settlement Panel" style="height: 66px; width: auto; display: block;">
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
@@ -1290,7 +1275,7 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a
-        href="https://wa.me/919999999999?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
+        href="https://wa.me/919205102515?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
         class="nav-cta"
         target="_blank"
       >
@@ -1309,7 +1294,7 @@
       <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
       <a href="#faq" onclick="toggleMenu()">FAQ</a>
       <a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/919205102515"
         target="_blank"
         style="color: var(--primary)"
         ><i class="fab fa-whatsapp"></i> WhatsApp Us</a
@@ -1328,12 +1313,12 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill="#c7d9fc"
+            fill="#c2cfe8"
             fill-opacity="0.6"
             d="M0,80 C180,20 360,140 540,100 C720,60 900,160 1080,120 C1260,80 1350,40 1440,60 L1440,320 L0,320 Z"
           />
           <path
-            fill="#b8cef9"
+            fill="#a8bedc"
             fill-opacity="0.4"
             d="M0,120 C240,60 480,160 720,120 C960,80 1200,140 1440,100 L1440,320 L0,320 Z"
           />
@@ -1351,7 +1336,7 @@
             d="M0,160 C200,100 400,200 600,160 C800,120 1000,180 1200,140 C1320,116 1380,130 1440,120 L1440,320 L0,320 Z"
           />
           <path
-            fill="#eef4ff"
+            fill="#eaf0fa"
             fill-opacity="0.8"
             d="M0,200 C360,150 720,220 1080,185 C1260,168 1380,192 1440,188 L1440,320 L0,320 Z"
           />
@@ -1362,6 +1347,7 @@
         <div class="hero-badge">
           <span class="dot"></span> Trusted by 1000+ Clients Across India
         </div>
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">Settlement Simplified</div>
         <h1>Trusted Advocates for<br /><span>Your Debt Relief</span></h1>
         <p>
           We help you legally settle your loans and handle bank pressure. Our
@@ -1372,11 +1358,11 @@
           <a
             href="#contact"
             class="btn-primary"
-            style="background: var(--contact-button)"
+            style="background: var(--secondary); box-shadow: 0 4px 16px rgba(26, 58, 110, 0.35);"
             ><i class="fas fa-phone-alt"></i> Get Free Consultation</a
           >
           <a
-            href="https://wa.me/919999999999?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
+            href="https://wa.me/919205102515?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
             class="btn-whatsapp"
             target="_blank"
             ><i class="fab fa-whatsapp"></i> Talk to Us on WhatsApp</a
@@ -1429,7 +1415,7 @@
               "
             >
               <div
-                style="font-size: 1rem; font-weight: 800; color: var(--primary)"
+                style="font-size: 1rem; font-weight: 800; color: var(--secondary)"
               >
                 ₹2.4L
               </div>
@@ -1512,15 +1498,15 @@
           <div class="service-card-img">
             <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="bg1" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#eef4ff"/><stop offset="1" stop-color="#dde8fb"/></linearGradient>
-                <linearGradient id="bag1" x1="110" y1="40" x2="190" y2="165" gradientUnits="userSpaceOnUse"><stop stop-color="#5b8ff9"/><stop offset="1" stop-color="#1a6ef5"/></linearGradient>
+                <linearGradient id="bg1" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f0f5ff"/><stop offset="1" stop-color="#e8edf8"/></linearGradient>
+                <linearGradient id="bag1" x1="110" y1="40" x2="190" y2="165" gradientUnits="userSpaceOnUse"><stop stop-color="#66bb6a"/><stop offset="1" stop-color="#2e7d32"/></linearGradient>
               </defs>
               <rect width="300" height="200" fill="url(#bg1)"/>
-              <ellipse cx="150" cy="178" rx="70" ry="12" fill="#b8cef9" opacity=".3"/>
+              <ellipse cx="150" cy="178" rx="70" ry="12" fill="#a8bedc" opacity=".3"/>
               <path d="M108,88 C108,52 192,52 192,88 C192,134 176,165 150,165 C124,165 108,134 108,88Z" fill="url(#bag1)"/>
               <path d="M120,72 C120,62 136,57 148,60" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".35"/>
-              <rect x="134" y="50" width="32" height="18" rx="7" fill="#3358c4"/>
-              <path d="M134,50 Q150,37 166,50 Q160,63 140,63 Q134,58 134,50Z" fill="#2346a8"/>
+              <rect x="134" y="50" width="32" height="18" rx="7" fill="#1b5e20"/>
+              <path d="M134,50 Q150,37 166,50 Q160,63 140,63 Q134,58 134,50Z" fill="#155724"/>
               <text x="150" y="128" text-anchor="middle" font-size="40" font-weight="bold" fill="white" font-family="Arial" opacity=".95">&#8377;</text>
               <ellipse cx="68" cy="152" rx="22" ry="9" fill="#f5c842"/>
               <rect x="46" y="130" width="44" height="22" rx="4" fill="#f5c842"/>
@@ -1531,7 +1517,7 @@
               <ellipse cx="232" cy="138" rx="18" ry="8" fill="#fdd835"/>
               <text x="232" y="143" text-anchor="middle" font-size="9" fill="#9a6700" font-weight="bold" font-family="Arial">&#8377;</text>
               <circle cx="82" cy="52" r="5" fill="#fdd835" opacity=".8"/>
-              <circle cx="212" cy="58" r="4" fill="#5b8ff9" opacity=".7"/>
+              <circle cx="212" cy="58" r="4" fill="#66bb6a" opacity=".7"/>
               <circle cx="244" cy="98" r="5" fill="#fdd835" opacity=".6"/>
               <polyline points="200,148 220,120 238,130 260,94" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
               <polygon points="260,94 250,100 257,108" fill="#22c55e"/>
@@ -1548,32 +1534,32 @@
           <div class="service-card-img">
             <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="bg2" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#eef4ff"/><stop offset="1" stop-color="#e0eaff"/></linearGradient>
+                <linearGradient id="bg2" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f0f5ff"/><stop offset="1" stop-color="#e2e9f8"/></linearGradient>
               </defs>
               <rect width="300" height="200" fill="url(#bg2)"/>
-              <rect x="44" y="38" width="80" height="108" rx="9" fill="white" stroke="#d0dcf0" stroke-width="1.5" transform="rotate(-6 44 38)"/>
-              <rect x="52" y="58" width="48" height="4" rx="2" fill="#d0dcf0" transform="rotate(-6 52 58)"/>
-              <rect x="52" y="68" width="38" height="4" rx="2" fill="#d0dcf0" transform="rotate(-6 52 68)"/>
-              <rect x="52" y="78" width="44" height="4" rx="2" fill="#d0dcf0" transform="rotate(-6 52 78)"/>
-              <rect x="84" y="22" width="112" height="150" rx="10" fill="white" stroke="#c5d5f0" stroke-width="1.5"/>
-              <rect x="84" y="22" width="112" height="30" rx="10" fill="#1a6ef5"/>
-              <rect x="84" y="39" width="112" height="13" fill="#1a6ef5"/>
+              <rect x="44" y="38" width="80" height="108" rx="9" fill="white" stroke="#c5d3e8" stroke-width="1.5" transform="rotate(-6 44 38"/>
+              <rect x="52" y="58" width="48" height="4" rx="2" fill="#c5d3e8" transform="rotate(-6 52 58)"/>
+              <rect x="52" y="68" width="38" height="4" rx="2" fill="#c5d3e8" transform="rotate(-6 52 68)"/>
+              <rect x="52" y="78" width="44" height="4" rx="2" fill="#c5d3e8" transform="rotate(-6 52 78)"/>
+              <rect x="84" y="22" width="112" height="150" rx="10" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
+              <rect x="84" y="22" width="112" height="30" rx="10" fill="#2e7d32"/>
+              <rect x="84" y="39" width="112" height="13" fill="#2e7d32"/>
               <text x="140" y="42" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="Arial">LEGAL NOTICE</text>
-              <rect x="100" y="66" width="80" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="100" y="78" width="64" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="100" y="90" width="74" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="100" y="102" width="56" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="100" y="114" width="70" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="100" y="126" width="46" height="5" rx="2.5" fill="#c5d5f0"/>
-              <line x1="100" y1="155" x2="162" y2="155" stroke="#a0b4d8" stroke-width="1.5" stroke-dasharray="3 2"/>
-              <path d="M100,153 Q112,146 122,154 Q132,162 145,152" stroke="#1a6ef5" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <circle cx="222" cy="118" r="44" fill="#e8f0fe" stroke="#1a6ef5" stroke-width="3"/>
-              <circle cx="222" cy="118" r="36" fill="none" stroke="#1a6ef5" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <text x="222" y="111" text-anchor="middle" font-size="9.5" fill="#1a6ef5" font-weight="bold" font-family="Arial">APPROVED</text>
-              <path d="M207,119 L217,129 L238,107" stroke="#1a6ef5" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="238" y="28" width="50" height="18" rx="7" fill="#1e3a5f" transform="rotate(-42 238 28)"/>
-              <rect x="250" y="50" width="14" height="40" rx="5" fill="#3358c4" transform="rotate(-42 250 50)"/>
-              <rect x="228" y="17" width="40" height="14" rx="5" fill="#2d5be3" transform="rotate(-42 228 17)"/>
+              <rect x="100" y="66" width="80" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="100" y="78" width="64" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="100" y="90" width="74" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="100" y="102" width="56" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="100" y="114" width="70" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="100" y="126" width="46" height="5" rx="2.5" fill="#c5d3e8"/>
+              <line x1="100" y1="155" x2="162" y2="155" stroke="#81c784" stroke-width="1.5" stroke-dasharray="3 2"/>
+              <path d="M100,153 Q112,146 122,154 Q132,162 145,152" stroke="#2e7d32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="222" cy="118" r="44" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3"/>
+              <circle cx="222" cy="118" r="36" fill="none" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <text x="222" y="111" text-anchor="middle" font-size="9.5" fill="#2e7d32" font-weight="bold" font-family="Arial">APPROVED</text>
+              <path d="M207,119 L217,129 L238,107" stroke="#2e7d32" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <rect x="238" y="28" width="50" height="18" rx="7" fill="#1a3a6e" transform="rotate(-42 238 28)"/>
+              <rect x="250" y="50" width="14" height="40" rx="5" fill="#0f2348" transform="rotate(-42 250 50)"/>
+              <rect x="228" y="17" width="40" height="14" rx="5" fill="#1a3a6e" transform="rotate(-42 228 17)"/>
             </svg>
           </div>
           <div class="service-card-body">
@@ -1587,11 +1573,11 @@
           <div class="service-card-img">
             <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="bg3" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#eef4ff"/><stop offset="1" stop-color="#dce8fb"/></linearGradient>
-                <linearGradient id="body3" x1="106" y1="94" x2="168" y2="185" gradientUnits="userSpaceOnUse"><stop stop-color="#5b8ff9"/><stop offset="1" stop-color="#1a6ef5"/></linearGradient>
+                <linearGradient id="bg3" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f1faf2"/><stop offset="1" stop-color="#dce7f5"/></linearGradient>
+                <linearGradient id="body3" x1="106" y1="94" x2="168" y2="185" gradientUnits="userSpaceOnUse"><stop stop-color="#2a5298"/><stop offset="1" stop-color="#1a3a6e"/></linearGradient>
               </defs>
               <rect width="300" height="200" fill="url(#bg3)"/>
-              <ellipse cx="138" cy="192" rx="42" ry="8" fill="#b8cef9" opacity=".3"/>
+              <ellipse cx="138" cy="192" rx="42" ry="8" fill="#a8bedc" opacity=".3"/>
               <path d="M98,108 C98,92 118,84 138,84 C158,84 178,92 178,108 L178,182 Q138,188 98,182Z" fill="url(#body3)"/>
               <path d="M128,84 L138,98 L148,84" fill="white" opacity=".25"/>
               <path d="M134,98 L138,118 L142,98" fill="white" opacity=".2"/>
@@ -1605,18 +1591,18 @@
               <circle cx="147" cy="65" r="1" fill="white"/>
               <path d="M130,76 Q138,82 146,76" stroke="#c07850" stroke-width="2" fill="none" stroke-linecap="round"/>
               <path d="M111,57 Q114,37 138,37 Q162,37 165,57" stroke="#2c1810" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <rect x="107" y="56" width="11" height="17" rx="5.5" fill="#1a6ef5"/>
-              <rect x="158" y="56" width="11" height="17" rx="5.5" fill="#1a6ef5"/>
-              <path d="M111,70 Q99,82 103,91" stroke="#1a6ef5" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <circle cx="103" cy="93" r="5.5" fill="#1a6ef5"/>
-              <rect x="188" y="36" width="96" height="48" rx="14" fill="#1a6ef5"/>
-              <path d="M188,74 L175,86 L197,74Z" fill="#1a6ef5"/>
+              <rect x="107" y="56" width="11" height="17" rx="5.5" fill="#1a3a6e"/>
+              <rect x="158" y="56" width="11" height="17" rx="5.5" fill="#1a3a6e"/>
+              <path d="M111,70 Q99,82 103,91" stroke="#1a3a6e" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <circle cx="103" cy="93" r="5.5" fill="#1a3a6e"/>
+              <rect x="188" y="36" width="96" height="48" rx="14" fill="#1a3a6e"/>
+              <path d="M188,74 L175,86 L197,74Z" fill="#1a3a6e"/>
               <rect x="202" y="52" width="64" height="5" rx="2.5" fill="white" opacity=".8"/>
               <rect x="202" y="63" width="48" height="5" rx="2.5" fill="white" opacity=".5"/>
-              <rect x="18" y="105" width="88" height="44" rx="13" fill="white" stroke="#c5d5f0" stroke-width="1.5"/>
-              <path d="M106,132 L118,140 L104,132Z" fill="white" stroke="#c5d5f0" stroke-width="1.5"/>
-              <rect x="28" y="116" width="54" height="4" rx="2" fill="#a0b4d8"/>
-              <rect x="28" y="126" width="40" height="4" rx="2" fill="#a0b4d8"/>
+              <rect x="18" y="105" width="88" height="44" rx="13" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
+              <path d="M106,132 L118,140 L104,132Z" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
+              <rect x="28" y="116" width="54" height="4" rx="2" fill="#a8bedc"/>
+              <rect x="28" y="126" width="40" height="4" rx="2" fill="#a8bedc"/>
               <path d="M232,96 C232,96 264,83 264,83 L264,118 C264,137 248,150 232,159 C216,150 200,137 200,118 L200,83 Z" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
               <path d="M218,124 L226,133 L246,113" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             </svg>
@@ -1632,34 +1618,34 @@
           <div class="service-card-img">
             <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
-                <linearGradient id="bg4" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#eef4ff"/><stop offset="1" stop-color="#dce8fb"/></linearGradient>
+                <linearGradient id="bg4" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f1faf2"/><stop offset="1" stop-color="#dce7f5"/></linearGradient>
               </defs>
               <rect width="300" height="200" fill="url(#bg4)"/>
-              <rect x="58" y="28" width="144" height="162" rx="11" fill="white" stroke="#c5d5f0" stroke-width="1.5"/>
-              <rect x="116" y="18" width="48" height="24" rx="8" fill="#c5d5f0"/>
+              <rect x="58" y="28" width="144" height="162" rx="11" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
+              <rect x="116" y="18" width="48" height="24" rx="8" fill="#c5d3e8"/>
               <rect x="124" y="22" width="32" height="16" rx="5" fill="white"/>
-              <rect x="58" y="28" width="144" height="30" rx="11" fill="#1a6ef5"/>
-              <rect x="58" y="45" width="144" height="13" fill="#1a6ef5"/>
+              <rect x="58" y="28" width="144" height="30" rx="11" fill="#1a3a6e"/>
+              <rect x="58" y="45" width="144" height="13" fill="#1a3a6e"/>
               <text x="130" y="48" text-anchor="middle" font-size="9.5" fill="white" font-weight="bold" font-family="Arial">CASE EVALUATION</text>
-              <rect x="76" y="72" width="14" height="14" rx="3" fill="#1a6ef5"/>
+              <rect x="76" y="72" width="14" height="14" rx="3" fill="#2e7d32"/>
               <path d="M79,79 L83,83 L90,75" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="98" y="75" width="78" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="76" y="94" width="14" height="14" rx="3" fill="#1a6ef5"/>
+              <rect x="98" y="75" width="78" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="76" y="94" width="14" height="14" rx="3" fill="#2e7d32"/>
               <path d="M79,101 L83,105 L90,97" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="98" y="97" width="64" height="5" rx="2.5" fill="#c5d5f0"/>
-              <rect x="76" y="116" width="14" height="14" rx="3" fill="none" stroke="#c5d5f0" stroke-width="1.5"/>
-              <rect x="98" y="119" width="72" height="5" rx="2.5" fill="#dde8fb"/>
-              <rect x="76" y="138" width="14" height="14" rx="3" fill="none" stroke="#c5d5f0" stroke-width="1.5"/>
-              <rect x="98" y="141" width="55" height="5" rx="2.5" fill="#dde8fb"/>
+              <rect x="98" y="97" width="64" height="5" rx="2.5" fill="#c5d3e8"/>
+              <rect x="76" y="116" width="14" height="14" rx="3" fill="none" stroke="#c5d3e8" stroke-width="1.5"/>
+              <rect x="98" y="119" width="72" height="5" rx="2.5" fill="#dce7f5"/>
+              <rect x="76" y="138" width="14" height="14" rx="3" fill="none" stroke="#c5d3e8" stroke-width="1.5"/>
+              <rect x="98" y="141" width="55" height="5" rx="2.5" fill="#dce7f5"/>
               <circle cx="222" cy="112" r="50" fill="white" opacity=".5"/>
               <circle cx="222" cy="112" r="44" fill="white" opacity=".7"/>
-              <circle cx="222" cy="112" r="44" fill="none" stroke="#1a6ef5" stroke-width="5"/>
-              <polyline points="196,130 207,114 219,122 231,102 243,110" stroke="#1a6ef5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="222" cy="112" r="44" fill="none" stroke="#1a3a6e" stroke-width="5"/>
+              <polyline points="196,130 207,114 219,122 231,102 243,110" stroke="#2e7d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
               <circle cx="243" cy="110" r="5" fill="#22c55e"/>
-              <circle cx="231" cy="102" r="3.5" fill="#1a6ef5"/>
-              <circle cx="207" cy="114" r="3.5" fill="#1a6ef5"/>
-              <line x1="256" y1="146" x2="283" y2="175" stroke="#1e3a5f" stroke-width="9" stroke-linecap="round"/>
-              <line x1="256" y1="146" x2="283" y2="175" stroke="#3358c4" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="231" cy="102" r="3.5" fill="#2e7d32"/>
+              <circle cx="207" cy="114" r="3.5" fill="#2e7d32"/>
+              <line x1="256" y1="146" x2="283" y2="175" stroke="#1a3a6e" stroke-width="9" stroke-linecap="round"/>
+              <line x1="256" y1="146" x2="283" y2="175" stroke="#1a3a6e" stroke-width="6" stroke-linecap="round"/>
             </svg>
           </div>
           <div class="service-card-body">
@@ -1795,7 +1781,7 @@
             legally and ethically.
           </div>
           <a
-            href="https://wa.me/919999999999?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
+            href="https://wa.me/919205102515?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
             class="btn-white"
             target="_blank"
           >
@@ -1847,7 +1833,7 @@
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <blockquote>
-              "The bank harassment stopped completely once SettleSure
+              "The bank harassment stopped completely once Settlement Panel
               stepped in. They drafted the legal reply and got me a settlement
               within 45 days. Life-changing."
             </blockquote>
@@ -1985,7 +1971,7 @@
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <blockquote>
-              "I was about to lose my property to the bank. SettleSure
+              "I was about to lose my property to the bank. Settlement Panel
               filed the right legal documents and stopped the proceedings. My
               property is safe now. Forever grateful."
             </blockquote>
@@ -2032,7 +2018,7 @@
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <blockquote>
-              "The bank harassment stopped completely once SettleSure
+              "The bank harassment stopped completely once Settlement Panel
               stepped in. They drafted the legal reply and got me a settlement
               within 45 days. Life-changing."
             </blockquote>
@@ -2170,7 +2156,7 @@
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <blockquote>
-              "I was about to lose my property to the bank. SettleSure
+              "I was about to lose my property to the bank. Settlement Panel
               filed the right legal documents and stopped the proceedings. My
               property is safe now. Forever grateful."
             </blockquote>
@@ -2268,16 +2254,16 @@
             advice on how we can help you.
           </p>
           <a
-            href="https://wa.me/919999999999?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
+            href="https://wa.me/919205102515?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
             class="btn-primary"
             target="_blank"
-            style="margin-bottom: 16px; display: inline-flex"
+            style="margin-bottom: 16px; display: inline-flex; background: var(--secondary); box-shadow: 0 4px 16px rgba(26,58,110,0.3);"
           >
             <i class="fas fa-phone-alt"></i> Get Your Free Consultation
           </a>
           <br />
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/919205102515"
             class="btn-whatsapp"
             target="_blank"
             style="display: inline-flex; margin-top: 12px"
@@ -2316,14 +2302,15 @@
       </p>
       <div class="final-btns">
         <a
-          href="https://wa.me/919999999999?text=Hi,%20I%20need%20a%20free%20consultation%20for%20loan%20settlement"
+          href="https://wa.me/919205102515?text=Hi,%20I%20need%20a%20free%20consultation%20for%20loan%20settlement"
           class="btn-primary"
           target="_blank"
+          style="background: white; color: var(--secondary); box-shadow: 0 4px 16px rgba(0,0,0,0.2);"
         >
           <i class="fas fa-phone-alt"></i> Get Free Consultation
         </a>
         <a
-          href="https://wa.me/919999999999"
+          href="https://wa.me/919205102515"
           class="btn-whatsapp-solid"
           target="_blank"
         >
@@ -2348,7 +2335,9 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo">
-            <i class="fas fa-balance-scale"></i> SettleSure
+            <div style="background: white; padding: 6px 12px; border-radius: 8px; display: inline-block; line-height: 0;">
+              <img src="assets/logo.svg" alt="Settlement Panel" style="height: 36px; width: auto; display: block;">
+            </div>
           </div>
           <p>
             India's trusted platform for loan settlement and legal assistance.
@@ -2378,13 +2367,13 @@
           <h4>Contact</h4>
           <ul>
             <li>
-              <a href="https://wa.me/919999999999" target="_blank"
+              <a href="https://wa.me/919205102515" target="_blank"
                 ><i class="fab fa-whatsapp"></i> WhatsApp Us</a
               >
             </li>
             <li>
-              <a href="mailto:help@debtreliefindia.in"
-                >help@debtreliefindia.in</a
+              <a href="mailto:help@settlementpanel.in"
+                >help@settlementpanel.in</a
               >
             </li>
             <li><a href="#">Privacy Policy</a></li>
@@ -2393,11 +2382,11 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 SettleSure India. All rights reserved.</p>
+        <p>© 2026 Settlement Panel India. All rights reserved.</p>
         <p>Made with ❤️ for financially stressed Indians</p>
       </div>
       <div class="footer-disclaimer">
-        <strong>Disclaimer:</strong> SettleSure is an independent
+        <strong>Disclaimer:</strong> Settlement Panel is an independent
         advisory and legal assistance service. We are not affiliated with any
         bank, NBFC, or government body. Loan settlement may affect your credit
         score. Results vary by case. Please consult our experts for advice
@@ -2407,7 +2396,7 @@
 
     <!-- WHATSAPP FLOAT -->
     <a
-      href="https://wa.me/919999999999?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
+      href="https://wa.me/919205102515?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
       class="whatsapp-float"
       target="_blank"
       title="Chat with us on WhatsApp"
