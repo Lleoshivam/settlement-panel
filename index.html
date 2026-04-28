@@ -1201,59 +1201,51 @@
 
       /* ─── MOBILE ─── */
       @media (max-width: 900px) {
+        .nav-links, .nav-cta { display: none; }
+        .hamburger { display: flex; }
+
         .hero {
           grid-template-columns: 1fr;
-          padding: 60px 5% 40px;
+          padding: 48px 5% 40px;
           min-height: auto;
+          gap: 32px;
         }
         .hero-visual {
-          display: none;
+          display: block;
+          min-height: 400px;
+          position: relative;
         }
-        .why-grid {
-          grid-template-columns: 1fr;
+        .hero-illustration {
+          position: absolute;
+          top: 0; right: -8px;
+          width: 88%;
+          transform: rotate(4deg);
+          transform-origin: top right;
         }
-        .faq-grid {
-          grid-template-columns: 1fr;
+        .hero-card-main {
+          position: absolute;
+          bottom: 0; left: -8px;
+          width: 76%;
+          transform: rotate(-4deg);
+          transform-origin: bottom left;
+          padding: 16px;
         }
-        .footer-top {
-          grid-template-columns: 1fr 1fr;
-        }
-        .steps-grid::before {
-          display: none;
-        }
+        .hero-stat-badge.top-right { top: 8px; right: 8px; }
+        .hero-stat-badge.top-left  { top: 8px; left: 8px; }
+        .why-grid { grid-template-columns: 1fr; }
+        .faq-grid { grid-template-columns: 1fr; }
+        .footer-top { grid-template-columns: 1fr 1fr; }
+        .steps-grid::before { display: none; }
       }
+
       @media (max-width: 640px) {
-        .nav-links,
-        .nav-cta {
-          display: none;
-        }
-        .hamburger {
-          display: flex;
-        }
-        .why-items {
-          grid-template-columns: 1fr;
-        }
-        .footer-top {
-          grid-template-columns: 1fr;
-        }
-        .hero h1 {
-          font-size: 1.8rem;
-        }
-        section {
-          padding: 56px 5%;
-        }
-        .hero-btns {
-          flex-direction: column;
-        }
-        .hero-btns a,
-        .hero-btns button {
-          width: 100%;
-          justify-content: center;
-        }
-        .final-btns {
-          flex-direction: column;
-          align-items: center;
-        }
+        .why-items { grid-template-columns: 1fr; }
+        .footer-top { grid-template-columns: 1fr; }
+        .hero h1 { font-size: 1.8rem; }
+        section { padding: 56px 5%; }
+        .hero-btns { flex-direction: column; }
+        .hero-btns a, .hero-btns button { width: 100%; justify-content: center; }
+        .final-btns { flex-direction: column; align-items: center; }
       }
 
       /* ─── MOBILE MENU ─── */
