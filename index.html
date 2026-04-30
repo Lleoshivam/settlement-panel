@@ -75,12 +75,13 @@
         text-decoration: none;
       }
       .nav-logo .nav-brand-name {
-        font-size: 1rem;
-        font-weight: 900;
-        color: #152015;
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: #013101;
         letter-spacing: 1px;
         white-space: nowrap;
         text-align: center;
+        font: bold;
       }
       .nav-links {
         display: flex;
@@ -987,6 +988,132 @@
         line-height: 1.6;
       }
 
+      /* ─── GET IN TOUCH FORM ─── */
+      .get-in-touch {
+        background: linear-gradient(135deg, #f0f4fb, #e8edf8);
+        border-radius: 20px;
+        padding: 40px;
+        border: 1.5px solid var(--border);
+        display: flex;
+        flex-direction: column;
+      }
+      .get-in-touch .section-tag {
+        margin-bottom: 14px;
+      }
+      .get-in-touch h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+        color: var(--text-dark);
+      }
+      .get-in-touch h2 span {
+        color: var(--secondary);
+      }
+      .get-in-touch > p {
+        color: var(--text-light);
+        font-size: 0.875rem;
+        margin-bottom: 24px;
+        line-height: 1.6;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        flex: 1;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-sm);
+        font-family: "Inter", sans-serif;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        background: white;
+        outline: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: var(--secondary);
+        box-shadow: 0 0 0 3px rgba(34, 85, 176, 0.1);
+      }
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 96px;
+      }
+      .contact-form button {
+        background: var(--secondary);
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: var(--radius-sm);
+        font-family: "Inter", sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 4px 16px rgba(34, 85, 176, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .contact-form button:hover {
+        background: var(--secondary-dark);
+        transform: translateY(-2px);
+      }
+      .form-success,
+      .form-error {
+        display: none;
+        border-radius: var(--radius-sm);
+        padding: 14px 18px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 4px;
+      }
+      .form-success {
+        background: var(--primary-light);
+        border: 1.5px solid var(--primary);
+        color: var(--primary-dark);
+      }
+      .form-error {
+        background: #fff0f0;
+        border: 1.5px solid #e53935;
+        color: #c62828;
+      }
+      .contact-form input.input-error,
+      .contact-form textarea.input-error {
+        border-color: #e53935;
+        box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1);
+      }
+      .field-error {
+        display: block;
+        font-size: 0.78rem;
+        color: #e53935;
+        margin-top: -8px;
+        margin-bottom: 2px;
+        font-weight: 500;
+      }
+
+      /* ─── FULL-WIDTH FAQ BELOW ─── */
+      .faq-full {
+        margin-top: 60px;
+        border-top: 1.5px solid var(--border);
+        padding-top: 52px;
+      }
+      .faq-full .section-tag {
+        margin-bottom: 14px;
+      }
+      .faq-full-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-top: 32px;
+      }
+
       /* ─── FINAL CTA ─── */
       .final-cta {
         background: linear-gradient(135deg, #1a42a0 0%, #2255b0 100%);
@@ -1196,8 +1323,13 @@
 
       /* ─── MOBILE ─── */
       @media (max-width: 900px) {
-        .nav-links, .nav-cta { display: none; }
-        .hamburger { display: flex; }
+        .nav-links,
+        .nav-cta {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
 
         .hero {
           grid-template-columns: 1fr;
@@ -1212,35 +1344,71 @@
         }
         .hero-illustration {
           position: absolute;
-          top: 0; right: -8px;
+          top: 0;
+          right: -8px;
           width: 88%;
           transform: rotate(4deg);
           transform-origin: top right;
         }
         .hero-card-main {
           position: absolute;
-          bottom: 0; left: -8px;
+          bottom: 0;
+          left: -8px;
           width: 76%;
           transform: rotate(-4deg);
           transform-origin: bottom left;
           padding: 16px;
         }
-        .hero-stat-badge.top-right { top: 8px; right: 8px; }
-        .hero-stat-badge.top-left  { top: 8px; left: 8px; }
-        .why-grid { grid-template-columns: 1fr; }
-        .faq-grid { grid-template-columns: 1fr; }
-        .footer-top { grid-template-columns: 1fr 1fr; }
-        .steps-grid::before { display: none; }
+        .hero-stat-badge.top-right {
+          top: 8px;
+          right: 8px;
+        }
+        .hero-stat-badge.top-left {
+          top: 8px;
+          left: 8px;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+        .faq-full-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+        .steps-grid::before {
+          display: none;
+        }
       }
 
       @media (max-width: 640px) {
-        .why-items { grid-template-columns: 1fr; }
-        .footer-top { grid-template-columns: 1fr; }
-        .hero h1 { font-size: 1.8rem; }
-        section { padding: 56px 5%; }
-        .hero-btns { flex-direction: column; }
-        .hero-btns a, .hero-btns button { width: 100%; justify-content: center; }
-        .final-btns { flex-direction: column; align-items: center; }
+        .why-items {
+          grid-template-columns: 1fr;
+        }
+        .footer-top {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+        section {
+          padding: 56px 5%;
+        }
+        .hero-btns {
+          flex-direction: column;
+        }
+        .hero-btns a,
+        .hero-btns button {
+          width: 100%;
+          justify-content: center;
+        }
+        .final-btns {
+          flex-direction: column;
+          align-items: center;
+        }
       }
 
       /* ─── MOBILE MENU ─── */
@@ -1274,14 +1442,18 @@
     <!-- NAVBAR -->
     <nav>
       <a href="#" class="nav-logo">
-        <img src="assets/logowithoutname.png" alt="" style="height: 52px; width: auto; display: block;">
+        <img
+          src="assets/logowithoutname.png"
+          alt=""
+          style="height: 52px; width: auto; display: block"
+        />
         <span class="nav-brand-name">SETTLEMENT PANEL</span>
       </a>
       <ul class="nav-links">
         <li><a href="#services">Services</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#why">Why Us</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
+        <!-- <li><a href="#testimonials">Reviews</a></li> -->
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a
@@ -1301,7 +1473,7 @@
       <a href="#services" onclick="toggleMenu()">Services</a>
       <a href="#process" onclick="toggleMenu()">How It Works</a>
       <a href="#why" onclick="toggleMenu()">Why Us</a>
-      <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+      <!-- <a href="#testimonials" onclick="toggleMenu()">Reviews</a> -->
       <a href="#faq" onclick="toggleMenu()">FAQ</a>
       <a
         href="https://wa.me/919205102515"
@@ -1357,7 +1529,18 @@
         <div class="hero-badge">
           <span class="dot"></span> Trusted by 1000+ Clients Across India
         </div>
-        <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">Settlement Simplified</div>
+        <div
+          style="
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+          "
+        >
+          Settlement Simplified
+        </div>
         <h1>Trusted Advocates for<br /><span>Your Debt Relief</span></h1>
         <p>
           We help you legally settle your loans and handle bank pressure. Our
@@ -1366,9 +1549,12 @@
         </p>
         <div class="hero-btns">
           <a
-            href="#contact"
+            href="tel:+919205102515"
             class="btn-primary"
-            style="background: var(--secondary); box-shadow: 0 4px 16px rgba(34, 85, 176, 0.35);"
+            style="
+              background: var(--secondary);
+              box-shadow: 0 4px 16px rgba(34, 85, 176, 0.35);
+            "
             ><i class="fas fa-phone-alt"></i> Get Free Consultation</a
           >
           <a
@@ -1425,7 +1611,11 @@
               "
             >
               <div
-                style="font-size: 1rem; font-weight: 800; color: var(--secondary)"
+                style="
+                  font-size: 1rem;
+                  font-weight: 800;
+                  color: var(--secondary);
+                "
               >
                 ₹2.4L
               </div>
@@ -1506,161 +1696,744 @@
         <!-- Card 1: Loan Settlement -->
         <div class="service-card">
           <div class="service-card-img">
-            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              viewBox="0 0 300 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <defs>
-                <linearGradient id="bg1" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f0f5ff"/><stop offset="1" stop-color="#e8edf8"/></linearGradient>
-                <linearGradient id="bag1" x1="110" y1="40" x2="190" y2="165" gradientUnits="userSpaceOnUse"><stop stop-color="#66bb6a"/><stop offset="1" stop-color="#2e7d32"/></linearGradient>
+                <linearGradient
+                  id="bg1"
+                  x1="0"
+                  y1="0"
+                  x2="300"
+                  y2="200"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#f0f5ff" />
+                  <stop offset="1" stop-color="#e8edf8" />
+                </linearGradient>
+                <linearGradient
+                  id="bag1"
+                  x1="110"
+                  y1="40"
+                  x2="190"
+                  y2="165"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#66bb6a" />
+                  <stop offset="1" stop-color="#2e7d32" />
+                </linearGradient>
               </defs>
-              <rect width="300" height="200" fill="url(#bg1)"/>
-              <ellipse cx="150" cy="178" rx="70" ry="12" fill="#a8bedc" opacity=".3"/>
-              <path d="M108,88 C108,52 192,52 192,88 C192,134 176,165 150,165 C124,165 108,134 108,88Z" fill="url(#bag1)"/>
-              <path d="M120,72 C120,62 136,57 148,60" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".35"/>
-              <rect x="134" y="50" width="32" height="18" rx="7" fill="#1b5e20"/>
-              <path d="M134,50 Q150,37 166,50 Q160,63 140,63 Q134,58 134,50Z" fill="#155724"/>
-              <text x="150" y="128" text-anchor="middle" font-size="40" font-weight="bold" fill="white" font-family="Arial" opacity=".95">&#8377;</text>
-              <ellipse cx="68" cy="152" rx="22" ry="9" fill="#f5c842"/>
-              <rect x="46" y="130" width="44" height="22" rx="4" fill="#f5c842"/>
-              <ellipse cx="68" cy="130" rx="22" ry="9" fill="#fdd835"/>
-              <text x="68" y="135" text-anchor="middle" font-size="11" fill="#9a6700" font-weight="bold" font-family="Arial">&#8377;</text>
-              <ellipse cx="232" cy="156" rx="18" ry="8" fill="#f5c842"/>
-              <rect x="214" y="138" width="36" height="18" rx="3" fill="#f5c842"/>
-              <ellipse cx="232" cy="138" rx="18" ry="8" fill="#fdd835"/>
-              <text x="232" y="143" text-anchor="middle" font-size="9" fill="#9a6700" font-weight="bold" font-family="Arial">&#8377;</text>
-              <circle cx="82" cy="52" r="5" fill="#fdd835" opacity=".8"/>
-              <circle cx="212" cy="58" r="4" fill="#66bb6a" opacity=".7"/>
-              <circle cx="244" cy="98" r="5" fill="#fdd835" opacity=".6"/>
-              <polyline points="200,148 220,120 238,130 260,94" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <polygon points="260,94 250,100 257,108" fill="#22c55e"/>
+              <rect width="300" height="200" fill="url(#bg1)" />
+              <ellipse
+                cx="150"
+                cy="178"
+                rx="70"
+                ry="12"
+                fill="#a8bedc"
+                opacity=".3"
+              />
+              <path
+                d="M108,88 C108,52 192,52 192,88 C192,134 176,165 150,165 C124,165 108,134 108,88Z"
+                fill="url(#bag1)"
+              />
+              <path
+                d="M120,72 C120,62 136,57 148,60"
+                stroke="white"
+                stroke-width="3"
+                stroke-linecap="round"
+                opacity=".35"
+              />
+              <rect
+                x="134"
+                y="50"
+                width="32"
+                height="18"
+                rx="7"
+                fill="#1b5e20"
+              />
+              <path
+                d="M134,50 Q150,37 166,50 Q160,63 140,63 Q134,58 134,50Z"
+                fill="#155724"
+              />
+              <text
+                x="150"
+                y="128"
+                text-anchor="middle"
+                font-size="40"
+                font-weight="bold"
+                fill="white"
+                font-family="Arial"
+                opacity=".95"
+              >
+                &#8377;
+              </text>
+              <ellipse cx="68" cy="152" rx="22" ry="9" fill="#f5c842" />
+              <rect
+                x="46"
+                y="130"
+                width="44"
+                height="22"
+                rx="4"
+                fill="#f5c842"
+              />
+              <ellipse cx="68" cy="130" rx="22" ry="9" fill="#fdd835" />
+              <text
+                x="68"
+                y="135"
+                text-anchor="middle"
+                font-size="11"
+                fill="#9a6700"
+                font-weight="bold"
+                font-family="Arial"
+              >
+                &#8377;
+              </text>
+              <ellipse cx="232" cy="156" rx="18" ry="8" fill="#f5c842" />
+              <rect
+                x="214"
+                y="138"
+                width="36"
+                height="18"
+                rx="3"
+                fill="#f5c842"
+              />
+              <ellipse cx="232" cy="138" rx="18" ry="8" fill="#fdd835" />
+              <text
+                x="232"
+                y="143"
+                text-anchor="middle"
+                font-size="9"
+                fill="#9a6700"
+                font-weight="bold"
+                font-family="Arial"
+              >
+                &#8377;
+              </text>
+              <circle cx="82" cy="52" r="5" fill="#fdd835" opacity=".8" />
+              <circle cx="212" cy="58" r="4" fill="#66bb6a" opacity=".7" />
+              <circle cx="244" cy="98" r="5" fill="#fdd835" opacity=".6" />
+              <polyline
+                points="200,148 220,120 238,130 260,94"
+                stroke="#22c55e"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <polygon points="260,94 250,100 257,108" fill="#22c55e" />
             </svg>
           </div>
           <div class="service-card-body">
             <h3>Loan Settlement Negotiation</h3>
-            <p>We negotiate with banks/NBFCs for reduced settlement amounts on your behalf.</p>
+            <p>
+              We negotiate with banks/NBFCs for reduced settlement amounts on
+              your behalf.
+            </p>
           </div>
         </div>
 
         <!-- Card 2: Legal Drafting -->
         <div class="service-card">
           <div class="service-card-img">
-            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              viewBox="0 0 300 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <defs>
-                <linearGradient id="bg2" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f0f5ff"/><stop offset="1" stop-color="#e2e9f8"/></linearGradient>
+                <linearGradient
+                  id="bg2"
+                  x1="0"
+                  y1="0"
+                  x2="300"
+                  y2="200"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#f0f5ff" />
+                  <stop offset="1" stop-color="#e2e9f8" />
+                </linearGradient>
               </defs>
-              <rect width="300" height="200" fill="url(#bg2)"/>
-              <rect x="44" y="38" width="80" height="108" rx="9" fill="white" stroke="#c5d3e8" stroke-width="1.5" transform="rotate(-6 44 38"/>
-              <rect x="52" y="58" width="48" height="4" rx="2" fill="#c5d3e8" transform="rotate(-6 52 58)"/>
-              <rect x="52" y="68" width="38" height="4" rx="2" fill="#c5d3e8" transform="rotate(-6 52 68)"/>
-              <rect x="52" y="78" width="44" height="4" rx="2" fill="#c5d3e8" transform="rotate(-6 52 78)"/>
-              <rect x="84" y="22" width="112" height="150" rx="10" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
-              <rect x="84" y="22" width="112" height="30" rx="10" fill="#2e7d32"/>
-              <rect x="84" y="39" width="112" height="13" fill="#2e7d32"/>
-              <text x="140" y="42" text-anchor="middle" font-size="10" fill="white" font-weight="bold" font-family="Arial">LEGAL NOTICE</text>
-              <rect x="100" y="66" width="80" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="100" y="78" width="64" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="100" y="90" width="74" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="100" y="102" width="56" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="100" y="114" width="70" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="100" y="126" width="46" height="5" rx="2.5" fill="#c5d3e8"/>
-              <line x1="100" y1="155" x2="162" y2="155" stroke="#81c784" stroke-width="1.5" stroke-dasharray="3 2"/>
-              <path d="M100,153 Q112,146 122,154 Q132,162 145,152" stroke="#2e7d32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <circle cx="222" cy="118" r="44" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3"/>
-              <circle cx="222" cy="118" r="36" fill="none" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4 3"/>
-              <text x="222" y="111" text-anchor="middle" font-size="9.5" fill="#2e7d32" font-weight="bold" font-family="Arial">APPROVED</text>
-              <path d="M207,119 L217,129 L238,107" stroke="#2e7d32" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="238" y="28" width="50" height="18" rx="7" fill="#2255b0" transform="rotate(-42 238 28)"/>
-              <rect x="250" y="50" width="14" height="40" rx="5" fill="#1a42a0" transform="rotate(-42 250 50)"/>
-              <rect x="228" y="17" width="40" height="14" rx="5" fill="#2255b0" transform="rotate(-42 228 17)"/>
+              <rect width="300" height="200" fill="url(#bg2)" />
+              <rect
+                x="44"
+                y="38"
+                width="80"
+                height="108"
+                rx="9"
+                fill="white"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+                transform="rotate(-6 44 38"
+              />
+              <rect
+                x="52"
+                y="58"
+                width="48"
+                height="4"
+                rx="2"
+                fill="#c5d3e8"
+                transform="rotate(-6 52 58)"
+              />
+              <rect
+                x="52"
+                y="68"
+                width="38"
+                height="4"
+                rx="2"
+                fill="#c5d3e8"
+                transform="rotate(-6 52 68)"
+              />
+              <rect
+                x="52"
+                y="78"
+                width="44"
+                height="4"
+                rx="2"
+                fill="#c5d3e8"
+                transform="rotate(-6 52 78)"
+              />
+              <rect
+                x="84"
+                y="22"
+                width="112"
+                height="150"
+                rx="10"
+                fill="white"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+              />
+              <rect
+                x="84"
+                y="22"
+                width="112"
+                height="30"
+                rx="10"
+                fill="#2e7d32"
+              />
+              <rect x="84" y="39" width="112" height="13" fill="#2e7d32" />
+              <text
+                x="140"
+                y="42"
+                text-anchor="middle"
+                font-size="10"
+                fill="white"
+                font-weight="bold"
+                font-family="Arial"
+              >
+                LEGAL NOTICE
+              </text>
+              <rect
+                x="100"
+                y="66"
+                width="80"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="100"
+                y="78"
+                width="64"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="100"
+                y="90"
+                width="74"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="100"
+                y="102"
+                width="56"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="100"
+                y="114"
+                width="70"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="100"
+                y="126"
+                width="46"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <line
+                x1="100"
+                y1="155"
+                x2="162"
+                y2="155"
+                stroke="#81c784"
+                stroke-width="1.5"
+                stroke-dasharray="3 2"
+              />
+              <path
+                d="M100,153 Q112,146 122,154 Q132,162 145,152"
+                stroke="#2e7d32"
+                stroke-width="2.5"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <circle
+                cx="222"
+                cy="118"
+                r="44"
+                fill="#e8f5e9"
+                stroke="#2e7d32"
+                stroke-width="3"
+              />
+              <circle
+                cx="222"
+                cy="118"
+                r="36"
+                fill="none"
+                stroke="#2e7d32"
+                stroke-width="1.5"
+                stroke-dasharray="4 3"
+              />
+              <text
+                x="222"
+                y="111"
+                text-anchor="middle"
+                font-size="9.5"
+                fill="#2e7d32"
+                font-weight="bold"
+                font-family="Arial"
+              >
+                APPROVED
+              </text>
+              <path
+                d="M207,119 L217,129 L238,107"
+                stroke="#2e7d32"
+                stroke-width="4.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <rect
+                x="238"
+                y="28"
+                width="50"
+                height="18"
+                rx="7"
+                fill="#2255b0"
+                transform="rotate(-42 238 28)"
+              />
+              <rect
+                x="250"
+                y="50"
+                width="14"
+                height="40"
+                rx="5"
+                fill="#1a42a0"
+                transform="rotate(-42 250 50)"
+              />
+              <rect
+                x="228"
+                y="17"
+                width="40"
+                height="14"
+                rx="5"
+                fill="#2255b0"
+                transform="rotate(-42 228 17)"
+              />
             </svg>
           </div>
           <div class="service-card-body">
             <h3>Legal Drafting &amp; Notices</h3>
-            <p>Professional drafting of legal responses, settlement letters, and replies to bank notices.</p>
+            <p>
+              Professional drafting of legal responses, settlement letters, and
+              replies to bank notices.
+            </p>
           </div>
         </div>
 
         <!-- Card 3: Bank Communication -->
         <div class="service-card">
           <div class="service-card-img">
-            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              viewBox="0 0 300 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <defs>
-                <linearGradient id="bg3" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f1faf2"/><stop offset="1" stop-color="#dce7f5"/></linearGradient>
-                <linearGradient id="body3" x1="106" y1="94" x2="168" y2="185" gradientUnits="userSpaceOnUse"><stop stop-color="#4a7fd4"/><stop offset="1" stop-color="#2255b0"/></linearGradient>
+                <linearGradient
+                  id="bg3"
+                  x1="0"
+                  y1="0"
+                  x2="300"
+                  y2="200"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#f1faf2" />
+                  <stop offset="1" stop-color="#dce7f5" />
+                </linearGradient>
+                <linearGradient
+                  id="body3"
+                  x1="106"
+                  y1="94"
+                  x2="168"
+                  y2="185"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#4a7fd4" />
+                  <stop offset="1" stop-color="#2255b0" />
+                </linearGradient>
               </defs>
-              <rect width="300" height="200" fill="url(#bg3)"/>
-              <ellipse cx="138" cy="192" rx="42" ry="8" fill="#a8bedc" opacity=".3"/>
-              <path d="M98,108 C98,92 118,84 138,84 C158,84 178,92 178,108 L178,182 Q138,188 98,182Z" fill="url(#body3)"/>
-              <path d="M128,84 L138,98 L148,84" fill="white" opacity=".25"/>
-              <path d="M134,98 L138,118 L142,98" fill="white" opacity=".2"/>
-              <circle cx="138" cy="67" r="25" fill="#f4c8a0"/>
-              <path d="M113,62 C113,39 163,39 163,62 C159,50 117,50 113,62Z" fill="#2c1810"/>
-              <ellipse cx="113" cy="68" rx="5" ry="7" fill="#e8b48a"/>
-              <ellipse cx="163" cy="68" rx="5" ry="7" fill="#e8b48a"/>
-              <circle cx="130" cy="66" r="3.5" fill="#2c1810"/>
-              <circle cx="146" cy="66" r="3.5" fill="#2c1810"/>
-              <circle cx="131" cy="65" r="1" fill="white"/>
-              <circle cx="147" cy="65" r="1" fill="white"/>
-              <path d="M130,76 Q138,82 146,76" stroke="#c07850" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M111,57 Q114,37 138,37 Q162,37 165,57" stroke="#2c1810" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <rect x="107" y="56" width="11" height="17" rx="5.5" fill="#2255b0"/>
-              <rect x="158" y="56" width="11" height="17" rx="5.5" fill="#2255b0"/>
-              <path d="M111,70 Q99,82 103,91" stroke="#2255b0" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <circle cx="103" cy="93" r="5.5" fill="#2255b0"/>
-              <rect x="188" y="36" width="96" height="48" rx="14" fill="#2255b0"/>
-              <path d="M188,74 L175,86 L197,74Z" fill="#2255b0"/>
-              <rect x="202" y="52" width="64" height="5" rx="2.5" fill="white" opacity=".8"/>
-              <rect x="202" y="63" width="48" height="5" rx="2.5" fill="white" opacity=".5"/>
-              <rect x="18" y="105" width="88" height="44" rx="13" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
-              <path d="M106,132 L118,140 L104,132Z" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
-              <rect x="28" y="116" width="54" height="4" rx="2" fill="#a8bedc"/>
-              <rect x="28" y="126" width="40" height="4" rx="2" fill="#a8bedc"/>
-              <path d="M232,96 C232,96 264,83 264,83 L264,118 C264,137 248,150 232,159 C216,150 200,137 200,118 L200,83 Z" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
-              <path d="M218,124 L226,133 L246,113" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <rect width="300" height="200" fill="url(#bg3)" />
+              <ellipse
+                cx="138"
+                cy="192"
+                rx="42"
+                ry="8"
+                fill="#a8bedc"
+                opacity=".3"
+              />
+              <path
+                d="M98,108 C98,92 118,84 138,84 C158,84 178,92 178,108 L178,182 Q138,188 98,182Z"
+                fill="url(#body3)"
+              />
+              <path d="M128,84 L138,98 L148,84" fill="white" opacity=".25" />
+              <path d="M134,98 L138,118 L142,98" fill="white" opacity=".2" />
+              <circle cx="138" cy="67" r="25" fill="#f4c8a0" />
+              <path
+                d="M113,62 C113,39 163,39 163,62 C159,50 117,50 113,62Z"
+                fill="#2c1810"
+              />
+              <ellipse cx="113" cy="68" rx="5" ry="7" fill="#e8b48a" />
+              <ellipse cx="163" cy="68" rx="5" ry="7" fill="#e8b48a" />
+              <circle cx="130" cy="66" r="3.5" fill="#2c1810" />
+              <circle cx="146" cy="66" r="3.5" fill="#2c1810" />
+              <circle cx="131" cy="65" r="1" fill="white" />
+              <circle cx="147" cy="65" r="1" fill="white" />
+              <path
+                d="M130,76 Q138,82 146,76"
+                stroke="#c07850"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <path
+                d="M111,57 Q114,37 138,37 Q162,37 165,57"
+                stroke="#2c1810"
+                stroke-width="4"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <rect
+                x="107"
+                y="56"
+                width="11"
+                height="17"
+                rx="5.5"
+                fill="#2255b0"
+              />
+              <rect
+                x="158"
+                y="56"
+                width="11"
+                height="17"
+                rx="5.5"
+                fill="#2255b0"
+              />
+              <path
+                d="M111,70 Q99,82 103,91"
+                stroke="#2255b0"
+                stroke-width="3"
+                fill="none"
+                stroke-linecap="round"
+              />
+              <circle cx="103" cy="93" r="5.5" fill="#2255b0" />
+              <rect
+                x="188"
+                y="36"
+                width="96"
+                height="48"
+                rx="14"
+                fill="#2255b0"
+              />
+              <path d="M188,74 L175,86 L197,74Z" fill="#2255b0" />
+              <rect
+                x="202"
+                y="52"
+                width="64"
+                height="5"
+                rx="2.5"
+                fill="white"
+                opacity=".8"
+              />
+              <rect
+                x="202"
+                y="63"
+                width="48"
+                height="5"
+                rx="2.5"
+                fill="white"
+                opacity=".5"
+              />
+              <rect
+                x="18"
+                y="105"
+                width="88"
+                height="44"
+                rx="13"
+                fill="white"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+              />
+              <path
+                d="M106,132 L118,140 L104,132Z"
+                fill="white"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+              />
+              <rect
+                x="28"
+                y="116"
+                width="54"
+                height="4"
+                rx="2"
+                fill="#a8bedc"
+              />
+              <rect
+                x="28"
+                y="126"
+                width="40"
+                height="4"
+                rx="2"
+                fill="#a8bedc"
+              />
+              <path
+                d="M232,96 C232,96 264,83 264,83 L264,118 C264,137 248,150 232,159 C216,150 200,137 200,118 L200,83 Z"
+                fill="#dcfce7"
+                stroke="#22c55e"
+                stroke-width="2"
+              />
+              <path
+                d="M218,124 L226,133 L246,113"
+                stroke="#22c55e"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
             </svg>
           </div>
           <div class="service-card-body">
             <h3>Bank Communication Handling</h3>
-            <p>We handle all stressful communications with your lender as your professional representative.</p>
+            <p>
+              We handle all stressful communications with your lender as your
+              professional representative.
+            </p>
           </div>
         </div>
 
         <!-- Card 4: Case Evaluation -->
         <div class="service-card">
           <div class="service-card-img">
-            <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              viewBox="0 0 300 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <defs>
-                <linearGradient id="bg4" x1="0" y1="0" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#f1faf2"/><stop offset="1" stop-color="#dce7f5"/></linearGradient>
+                <linearGradient
+                  id="bg4"
+                  x1="0"
+                  y1="0"
+                  x2="300"
+                  y2="200"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#f1faf2" />
+                  <stop offset="1" stop-color="#dce7f5" />
+                </linearGradient>
               </defs>
-              <rect width="300" height="200" fill="url(#bg4)"/>
-              <rect x="58" y="28" width="144" height="162" rx="11" fill="white" stroke="#c5d3e8" stroke-width="1.5"/>
-              <rect x="116" y="18" width="48" height="24" rx="8" fill="#c5d3e8"/>
-              <rect x="124" y="22" width="32" height="16" rx="5" fill="white"/>
-              <rect x="58" y="28" width="144" height="30" rx="11" fill="#2255b0"/>
-              <rect x="58" y="45" width="144" height="13" fill="#2255b0"/>
-              <text x="130" y="48" text-anchor="middle" font-size="9.5" fill="white" font-weight="bold" font-family="Arial">CASE EVALUATION</text>
-              <rect x="76" y="72" width="14" height="14" rx="3" fill="#2e7d32"/>
-              <path d="M79,79 L83,83 L90,75" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="98" y="75" width="78" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="76" y="94" width="14" height="14" rx="3" fill="#2e7d32"/>
-              <path d="M79,101 L83,105 L90,97" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="98" y="97" width="64" height="5" rx="2.5" fill="#c5d3e8"/>
-              <rect x="76" y="116" width="14" height="14" rx="3" fill="none" stroke="#c5d3e8" stroke-width="1.5"/>
-              <rect x="98" y="119" width="72" height="5" rx="2.5" fill="#dce7f5"/>
-              <rect x="76" y="138" width="14" height="14" rx="3" fill="none" stroke="#c5d3e8" stroke-width="1.5"/>
-              <rect x="98" y="141" width="55" height="5" rx="2.5" fill="#dce7f5"/>
-              <circle cx="222" cy="112" r="50" fill="white" opacity=".5"/>
-              <circle cx="222" cy="112" r="44" fill="white" opacity=".7"/>
-              <circle cx="222" cy="112" r="44" fill="none" stroke="#2255b0" stroke-width="5"/>
-              <polyline points="196,130 207,114 219,122 231,102 243,110" stroke="#2e7d32" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <circle cx="243" cy="110" r="5" fill="#22c55e"/>
-              <circle cx="231" cy="102" r="3.5" fill="#2e7d32"/>
-              <circle cx="207" cy="114" r="3.5" fill="#2e7d32"/>
-              <line x1="256" y1="146" x2="283" y2="175" stroke="#2255b0" stroke-width="9" stroke-linecap="round"/>
-              <line x1="256" y1="146" x2="283" y2="175" stroke="#2255b0" stroke-width="6" stroke-linecap="round"/>
+              <rect width="300" height="200" fill="url(#bg4)" />
+              <rect
+                x="58"
+                y="28"
+                width="144"
+                height="162"
+                rx="11"
+                fill="white"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+              />
+              <rect
+                x="116"
+                y="18"
+                width="48"
+                height="24"
+                rx="8"
+                fill="#c5d3e8"
+              />
+              <rect x="124" y="22" width="32" height="16" rx="5" fill="white" />
+              <rect
+                x="58"
+                y="28"
+                width="144"
+                height="30"
+                rx="11"
+                fill="#2255b0"
+              />
+              <rect x="58" y="45" width="144" height="13" fill="#2255b0" />
+              <text
+                x="130"
+                y="48"
+                text-anchor="middle"
+                font-size="9.5"
+                fill="white"
+                font-weight="bold"
+                font-family="Arial"
+              >
+                CASE EVALUATION
+              </text>
+              <rect
+                x="76"
+                y="72"
+                width="14"
+                height="14"
+                rx="3"
+                fill="#2e7d32"
+              />
+              <path
+                d="M79,79 L83,83 L90,75"
+                stroke="white"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <rect
+                x="98"
+                y="75"
+                width="78"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="76"
+                y="94"
+                width="14"
+                height="14"
+                rx="3"
+                fill="#2e7d32"
+              />
+              <path
+                d="M79,101 L83,105 L90,97"
+                stroke="white"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <rect
+                x="98"
+                y="97"
+                width="64"
+                height="5"
+                rx="2.5"
+                fill="#c5d3e8"
+              />
+              <rect
+                x="76"
+                y="116"
+                width="14"
+                height="14"
+                rx="3"
+                fill="none"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+              />
+              <rect
+                x="98"
+                y="119"
+                width="72"
+                height="5"
+                rx="2.5"
+                fill="#dce7f5"
+              />
+              <rect
+                x="76"
+                y="138"
+                width="14"
+                height="14"
+                rx="3"
+                fill="none"
+                stroke="#c5d3e8"
+                stroke-width="1.5"
+              />
+              <rect
+                x="98"
+                y="141"
+                width="55"
+                height="5"
+                rx="2.5"
+                fill="#dce7f5"
+              />
+              <circle cx="222" cy="112" r="50" fill="white" opacity=".5" />
+              <circle cx="222" cy="112" r="44" fill="white" opacity=".7" />
+              <circle
+                cx="222"
+                cy="112"
+                r="44"
+                fill="none"
+                stroke="#2255b0"
+                stroke-width="5"
+              />
+              <polyline
+                points="196,130 207,114 219,122 231,102 243,110"
+                stroke="#2e7d32"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <circle cx="243" cy="110" r="5" fill="#22c55e" />
+              <circle cx="231" cy="102" r="3.5" fill="#2e7d32" />
+              <circle cx="207" cy="114" r="3.5" fill="#2e7d32" />
+              <line
+                x1="256"
+                y1="146"
+                x2="283"
+                y2="175"
+                stroke="#2255b0"
+                stroke-width="9"
+                stroke-linecap="round"
+              />
+              <line
+                x1="256"
+                y1="146"
+                x2="283"
+                y2="175"
+                stroke="#2255b0"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
             </svg>
           </div>
           <div class="service-card-body">
             <h3>Case Evaluation &amp; Strategy</h3>
-            <p>Our experts assess your situation and suggest the best legal and financial approach.</p>
+            <p>
+              Our experts assess your situation and suggest the best legal and
+              financial approach.
+            </p>
           </div>
         </div>
       </div>
@@ -1802,7 +2575,7 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
+    <!-- TESTIMONIALS (commented out — re-enable when needed)
     <section class="testimonials" id="testimonials">
       <div class="text-center">
         <div class="section-tag">Client Reviews</div>
@@ -1816,7 +2589,6 @@
 
       <div class="testimonials-slider">
         <div class="testimonials-track">
-          <!-- === 8 UNIQUE CARDS === -->
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <blockquote>
@@ -2001,7 +2773,6 @@
             </div>
           </div>
 
-          <!-- === DUPLICATE SET FOR SEAMLESS LOOP === -->
           <div class="testimonial-card">
             <div class="stars">★★★★★</div>
             <blockquote>
@@ -2188,74 +2959,34 @@
         </div>
       </div>
     </section>
+    -->
 
-    <!-- FAQ -->
+    <!-- FAQ & CONTACT -->
     <section class="faq" id="faq">
+
+      <!-- Top row: Get in Touch form + Free Consultation box -->
       <div class="faq-grid">
-        <div>
-          <div class="section-tag">FAQ</div>
-          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
-          <p class="section-sub" style="margin-bottom: 32px">
-            Everything you need to know about loan settlement and our process.
-          </p>
-          <div class="faq-list">
-            <div class="faq-item open">
-              <div class="faq-question" onclick="toggleFaq(this)">
-                Is this legal and safe? <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="faq-answer">
-                Yes, absolutely. Loan settlement is a legally recognized process
-                in India. We work within RBI guidelines and ensure all
-                negotiations and agreements are legally documented and binding.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">
-                Will my credit score be affected?
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="faq-answer">
-                A settled loan may temporarily impact your CIBIL score. However,
-                we guide you on how to rebuild your credit after settlement. For
-                most clients, relief from debt far outweighs the short-term
-                score impact.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">
-                How much do your services cost?
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="faq-answer">
-                We work on a commission-based model — we only earn when we
-                successfully help you settle. The initial consultation is
-                completely free with no obligations.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">
-                Which banks and lenders do you work with?
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="faq-answer">
-                We work with all major public and private sector banks, NBFCs,
-                and digital lenders including SBI, HDFC, ICICI, Axis, Bajaj
-                Finance, IDFC, and many more.
-              </div>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)">
-                How long does the settlement process take?
-                <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="faq-answer">
-                Settlement timelines vary by case, but most cases resolve within
-                30–90 days. We keep you informed at every stage and work as
-                quickly as possible.
-              </div>
-            </div>
+
+        <!-- Get in Touch Form -->
+        <div class="get-in-touch">
+          <div class="section-tag">GET IN TOUCH</div>
+          <h2>Let's <span>Connect</span></h2>
+          <p>Have a question about your loan situation? Drop us a message and our experts will get back to you shortly — no fees, no obligations.</p>
+          <form class="contact-form" onsubmit="handleContactForm(event)">
+            <input type="text" name="name" placeholder="Your Full Name" required />
+            <input type="tel" name="phone" placeholder="Contact Number" required />
+            <textarea name="message" placeholder="Your message or query..."></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Thank you! We'll reach out to you soon.
+          </div>
+          <div class="form-error" id="formError">
+            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again or call us directly.
           </div>
         </div>
+
+        <!-- Free Consultation CTA -->
         <div class="faq-cta" id="contact">
           <div style="font-size: 3rem; margin-bottom: 16px">📞</div>
           <h3>Get Your Free Consultation</h3>
@@ -2264,10 +2995,15 @@
             advice on how we can help you.
           </p>
           <a
-            href="https://wa.me/919205102515?text=Hi,%20I%20need%20help%20with%20loan%20settlement"
+            href="tel:+919205102515"
             class="btn-primary"
             target="_blank"
-            style="margin-bottom: 16px; display: inline-flex; background: var(--secondary); box-shadow: 0 4px 16px rgba(26,58,110,0.3);"
+            style="
+              margin-bottom: 16px;
+              display: inline-flex;
+              background: var(--secondary);
+              box-shadow: 0 4px 16px rgba(26, 58, 110, 0.3);
+            "
           >
             <i class="fas fa-phone-alt"></i> Get Your Free Consultation
           </a>
@@ -2301,6 +3037,132 @@
           </div>
         </div>
       </div>
+
+      <!-- Full-width FAQ below -->
+      <div class="faq-full">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+        <p class="section-sub" style="margin-bottom: 0">
+          Everything you need to know about loan settlement and our process.
+        </p>
+        <div class="faq-full-grid">
+          <div class="faq-item open">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Is this legal and safe? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes, absolutely. Loan settlement is a legally recognized process
+              in India. We work within RBI guidelines and ensure all
+              negotiations and agreements are legally documented and binding.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Will my credit score be affected?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              A settled loan may temporarily impact your CIBIL score. However,
+              we guide you on how to rebuild your credit after settlement. For
+              most clients, relief from debt far outweighs the short-term
+              score impact.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How much do your services cost?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              We work on a commission-based model — we only earn when we
+              successfully help you settle. The initial consultation is
+              completely free with no obligations.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Which banks and lenders do you work with?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              We work with all major public and private sector banks, NBFCs,
+              and digital lenders including SBI, HDFC, ICICI, Axis, Bajaj
+              Finance, IDFC, and many more.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              How long does the settlement process take?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Settlement timelines vary by case, but most cases resolve within
+              30–90 days. We keep you informed at every stage and work as
+              quickly as possible.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What types of loans can be settled?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Personal loans, credit card dues, home loans, car loans, business
+              loans, and education loans can all be negotiated for settlement.
+              Our experts assess each case individually to find the best path
+              forward.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Is my personal information safe?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Absolutely. All client information is treated with the highest
+              confidentiality. We never share your details with third parties
+              without your explicit consent and maintain strict data security
+              protocols.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What documents do I need to provide?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Basic KYC documents, loan account statements, and an overview of
+              your current financial situation are usually sufficient to begin.
+              Our team will guide you through the exact requirements during
+              your free consultation.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              Can I settle multiple loans at once?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes, we specialize in handling multiple loan settlements
+              simultaneously. In many cases, consolidating negotiations allows
+              us to achieve better combined settlement terms for our clients.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              What if the bank refuses to settle?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              We have deep negotiation expertise and a high success rate. If a
+              lender is initially resistant, we apply legal and strategic
+              approaches — including formal written negotiations and regulatory
+              escalations — to reach a fair agreement.
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- FINAL CTA -->
@@ -2312,15 +3174,19 @@
       </p>
       <div class="final-btns">
         <a
-          href="https://wa.me/919205102515?text=Hi,%20I%20need%20a%20free%20consultation%20for%20loan%20settlement"
+          href="tel:+919205102515"
           class="btn-primary"
           target="_blank"
-          style="background: white; color: var(--secondary); box-shadow: 0 4px 16px rgba(0,0,0,0.2);"
+          style="
+            background: white;
+            color: var(--secondary);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+          "
         >
           <i class="fas fa-phone-alt"></i> Get Free Consultation
         </a>
         <a
-          href="https://wa.me/919205102515"
+          href="https://wa.me/919205102515?text=Hi,%20I%20need%20a%20free%20consultation%20for%20loan%20settlement"
           class="btn-whatsapp-solid"
           target="_blank"
         >
@@ -2345,10 +3211,32 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="logo">
-            <div style="background: white; padding: 5px 8px; border-radius: 8px; display: inline-flex; align-items: center; line-height: 0;">
-              <img src="assets/logowithoutname.png" alt="" style="height: 36px; width: auto; display: block;">
+            <div
+              style="
+                background: white;
+                padding: 5px 8px;
+                border-radius: 8px;
+                display: inline-flex;
+                align-items: center;
+                line-height: 0;
+              "
+            >
+              <img
+                src="assets/logowithoutname.png"
+                alt=""
+                style="height: 36px; width: auto; display: block"
+              />
             </div>
-            <span style="font-size: 0.95rem; font-weight: 900; color: white; letter-spacing: 1px; margin-left: 10px;">SETTLEMENT PANEL</span>
+            <span
+              style="
+                font-size: 0.95rem;
+                font-weight: 900;
+                color: white;
+                letter-spacing: 1px;
+                margin-left: 10px;
+              "
+              >SETTLEMENT PANEL</span
+            >
           </div>
           <p>
             India's trusted platform for loan settlement and legal assistance.
@@ -2383,8 +3271,8 @@
               >
             </li>
             <li>
-              <a href="mailto:help@settlementpanel.in"
-                >help@settlementpanel.in</a
+              <a href="mailto:help@settlementpanel.com"
+                >help@settlementpanel.com</a
               >
             </li>
             <li><a href="#">Privacy Policy</a></li>
@@ -2397,11 +3285,11 @@
         <p>Made with ❤️ for financially stressed Indians</p>
       </div>
       <div class="footer-disclaimer">
-        <strong>Disclaimer:</strong> Settlement Panel is an independent
-        advisory and legal assistance service. We are not affiliated with any
-        bank, NBFC, or government body. Loan settlement may affect your credit
-        score. Results vary by case. Please consult our experts for advice
-        specific to your situation.
+        <strong>Disclaimer:</strong> Settlement Panel is an independent advisory
+        and legal assistance service. We are not affiliated with any bank, NBFC,
+        or government body. Loan settlement may affect your credit score.
+        Results vary by case. Please consult our experts for advice specific to
+        your situation.
       </div>
     </footer>
 
@@ -2415,55 +3303,6 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("open");
-      }
-
-      function toggleFaq(el) {
-        const item = el.parentElement;
-        const isOpen = item.classList.contains("open");
-        document
-          .querySelectorAll(".faq-item")
-          .forEach((i) => i.classList.remove("open"));
-        if (!isOpen) item.classList.add("open");
-      }
-
-      // Smooth scroll for nav links
-      document.querySelectorAll('a[href^="#"]').forEach((a) => {
-        a.addEventListener("click", (e) => {
-          const target = document.querySelector(a.getAttribute("href"));
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        });
-      });
-
-      // Scroll reveal animation
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.style.opacity = "1";
-              e.target.style.transform = "translateY(0)";
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      document
-        .querySelectorAll(
-          ".service-card, .step-card, .why-card, .testimonial-card, .faq-item",
-        )
-        .forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(24px)";
-          el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-          observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

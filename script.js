@@ -1,0 +1,130 @@
+// ─── Mobile menu ───────────────────────────────────────────────
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("open");
+}
+
+// ─── FAQ accordion ─────────────────────────────────────────────
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains("open");
+  document.querySelectorAll(".faq-item").forEach((i) => i.classList.remove("open"));
+  if (!isOpen) item.classList.add("open");
+}
+
+// ─── Contact form ──────────────────────────────────────────────
+function showFieldError(input, message) {
+  clearFieldError(input);
+  input.classList.add("input-error");
+  const err = document.createElement("span");
+  err.className = "field-error";
+  err.textContent = message;
+  input.insertAdjacentElement("afterend", err);
+}
+
+function clearFieldError(input) {
+  input.classList.remove("input-error");
+  const existing = input.nextElementSibling;
+  if (existing && existing.classList.contains("field-error")) existing.remove();
+}
+
+function validateForm(form) {
+  const name  = form.querySelector('[name="name"]');
+  const phone = form.querySelector('[name="phone"]');
+  let valid = true;
+
+  clearFieldError(name);
+  clearFieldError(phone);
+
+  if (/\d/.test(name.value.trim())) {
+    showFieldError(name, "Name should not contain numbers.");
+    valid = false;
+  } else if (name.value.trim().length < 2) {
+    showFieldError(name, "Please enter your full name.");
+    valid = false;
+  }
+
+  const digits = phone.value.replace(/\D/g, "");
+  if (digits.length !== 10) {
+    showFieldError(phone, "Phone number must be exactly 10 digits.");
+    valid = false;
+  }
+
+  return valid;
+}
+
+async function handleContactForm(e) {
+  e.preventDefault();
+  const form = e.target;
+
+  if (!validateForm(form)) return;
+
+  const btn = form.querySelector("button");
+  const successBox = document.getElementById("formSuccess");
+  const errorBox   = document.getElementById("formError");
+
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+  btn.disabled  = true;
+  successBox.style.display = "none";
+  errorBox.style.display   = "none";
+
+  const data = {
+    name:    form.querySelector('[name="name"]').value.trim(),
+    phone:   form.querySelector('[name="phone"]').value.trim(),
+    message: form.querySelector('[name="message"]').value.trim(),
+  };
+
+  try {
+    const res = await fetch("https://formsubmit.co/ajax/help@settlementpanel.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+      form.reset();
+      successBox.style.display = "block";
+      setTimeout(() => (successBox.style.display = "none"), 6000);
+    } else {
+      throw new Error("Server error");
+    }
+  } catch {
+    errorBox.style.display = "block";
+    setTimeout(() => (errorBox.style.display = "none"), 6000);
+  } finally {
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled  = false;
+  }
+}
+
+// ─── Smooth scroll ─────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener("click", (e) => {
+    const target = document.querySelector(a.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
+});
+
+// ─── Scroll reveal ─────────────────────────────────────────────
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = "1";
+        e.target.style.transform = "translateY(0)";
+      }
+    });
+  },
+  { threshold: 0.1 },
+);
+
+document
+  .querySelectorAll(".service-card, .step-card, .why-card, .testimonial-card, .faq-item")
+  .forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(24px)";
+    el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+    observer.observe(el);
+  });
