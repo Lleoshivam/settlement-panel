@@ -121,10 +121,48 @@ const observer = new IntersectionObserver(
 );
 
 document
-  .querySelectorAll(".service-card, .step-card, .why-card, .testimonial-card, .faq-item")
+  .querySelectorAll(".service-card, .step-card, .why-card, .faq-item")
   .forEach((el) => {
     el.style.opacity = "0";
     el.style.transform = "translateY(24px)";
     el.style.transition = "opacity 0.5s ease, transform 0.5s ease";
     observer.observe(el);
   });
+
+// ─── Reviews carousel ───────────────────────────────────────────
+(async function loadReviews() {
+  const track = document.getElementById("testimonialsTrack");
+  if (!track) return;
+
+  try {
+    const reviews = await fetch("reviews.json").then(r => r.json());
+    if (!reviews.length) return;
+
+    function makeCard(r) {
+      const stars = "★".repeat(r.stars || 5);
+      const photo = r.photo
+        ? `<img class="author-avatar" src="${r.photo}" alt="${r.name}" />`
+        : `<div class="author-avatar" style="background:var(--secondary-light);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--secondary);font-size:1.1rem">${r.name.charAt(0)}</div>`;
+      const saved = r.saved
+        ? `<div class="testimonial-result" style="margin-left:auto">${r.saved}</div>`
+        : "";
+      return `<div class="testimonial-card">
+        <div class="stars">${stars}</div>
+        <blockquote>&ldquo;${r.quote}&rdquo;</blockquote>
+        <div class="testimonial-author">
+          ${photo}
+          <div>
+            <div class="author-name">${r.name}</div>
+            <div class="author-detail">${r.detail}</div>
+          </div>
+          ${saved}
+        </div>
+      </div>`;
+    }
+
+    // Duplicate set so the -50% translateX loop is seamless
+    track.innerHTML = [...reviews, ...reviews].map(makeCard).join("");
+  } catch (e) {
+    console.error("Could not load reviews.json", e);
+  }
+})();

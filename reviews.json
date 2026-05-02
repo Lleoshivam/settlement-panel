@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "stars": 5,
+    "quote": "Recovery agents were showing up at my office and calling my family members. I had no idea this was illegal. Settlement Panel sent a legal notice to the bank within 3 days and the harassment stopped completely. They settled my personal loan at 40 percent of what I owed. Very professional team.",
+    "name": "Arvind Mehta",
+    "detail": "Personal Loan Default, Mumbai",
+    "photo": "assets/avatars/arvind.svg",
+    "saved": "Saved ₹4.1L"
+  },
+  {
+    "id": 2,
+    "stars": 5,
+    "quote": "I had defaulted on 3 credit cards and was receiving 20 plus calls every day. Settlement Panel took over all communication with the banks and negotiated a combined settlement I could actually afford. The legal team handled everything. Process was completed in about 60 days.",
+    "name": "Neha Malhotra",
+    "detail": "Credit Card Default, Delhi",
+    "photo": "assets/avatars/neha.svg",
+    "saved": "Saved ₹2.6L"
+  },
+  {
+    "id": 3,
+    "stars": 5,
+    "quote": "My business shut down during COVID and I could not repay the business loan. The bank sent legal notices and I had no idea how to respond. Settlement Panel negotiated a one time settlement at a fraction of the outstanding and gave me a 90 day window to arrange the payment. Honest throughout, no false promises at all.",
+    "name": "Ravi Shankar Rao",
+    "detail": "Business Loan Default, Bangalore",
+    "photo": "assets/avatars/ravi.svg",
+    "saved": "Saved ₹8L"
+  },
+  {
+    "id": 4,
+    "stars": 5,
+    "quote": "I was receiving over 30 calls a day and it was affecting my work and mental health badly. Settlement Panel immediately sent notices to stop the harassment and then started the settlement process. They explained every step clearly. My personal loan was settled within 2 months at an amount I could manage.",
+    "name": "Pooja Sharma",
+    "detail": "Personal Loan Harassment, Jaipur",
+    "photo": "assets/avatars/pooja.svg",
+    "saved": "Saved ₹1.7L"
+  },
+  {
+    "id": 5,
+    "stars": 5,
+    "quote": "I had personal loans with HDFC, Bajaj Finance and an NBFC all going into default at the same time. I did not know where to start. Settlement Panel assessed all three accounts, created a priority plan and negotiated with all three simultaneously. All settled within 4 months. Their knowledge of RBI recovery guidelines was very useful.",
+    "name": "Suresh Nair",
+    "detail": "Multiple Loan Defaults, Hyderabad",
+    "photo": "assets/avatars/suresh.svg",
+    "saved": "Saved ₹11.3L"
+  },
+  {
+    "id": 6,
+    "stars": 5,
+    "quote": "My small business had a working capital loan that I could not repay after losing our main client. A recovery agency was sending people to my shop every week. Settlement Panel filed a legal complaint against them and started OTS negotiations with the lender at the same time. The whole thing was settled in 6 weeks.",
+    "name": "Kavitha Reddy",
+    "detail": "Business Loan Default, Chennai",
+    "photo": "assets/avatars/kavitha.svg",
+    "saved": "Saved ₹3.2L"
+  },
+  {
+    "id": 7,
+    "stars": 5,
+    "quote": "A medical emergency wiped out my savings and I could not keep up with the EMIs on my personal loan. I did not even know banks offer one time settlements. Settlement Panel explained the OTS process to me and negotiated with SBI on my behalf. Got a settlement amount I could pay in a single go.",
+    "name": "Mohit Agarwal",
+    "detail": "SBI Personal Loan Default, Pune",
+    "photo": "assets/avatars/mohit.svg",
+    "saved": "Saved ₹2.1L"
+  },
+  {
+    "id": 8,
+    "stars": 5,
+    "quote": "My credit card debt was sold to a collection agency and they were extremely aggressive on calls. Settlement Panel sent legal notices to both the original bank and the agency. The calls stopped within a week. They then negotiated a settlement at 35 percent of what was outstanding. Really excellent work.",
+    "name": "Deepika Joshi",
+    "detail": "Credit Card Debt Collection, Nagpur",
+    "photo": "assets/avatars/deepika.svg",
+    "saved": "Saved ₹1.4L"
+  }
+]

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#2A7A6A"/>
+  <!-- Shirt -->
+  <path d="M18,200 C18,158 58,142 100,142 C142,142 182,158 182,200Z" fill="#1A6050"/>
+  <polygon points="88,142 100,160 112,142" fill="#F0F0F0"/>
+  <!-- Neck -->
+  <rect x="87" y="126" width="26" height="20" rx="4" fill="#C07840"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="98" rx="47" ry="50" fill="#C07840"/>
+  <!-- Ears -->
+  <path d="M53,90 C46,92 43,100 43,104 C43,108 46,114 53,114 C55,106 55,96 53,90Z" fill="#A86030"/>
+  <path d="M147,90 C154,92 157,100 157,104 C157,108 154,114 147,114 C145,106 145,96 147,90Z" fill="#A86030"/>
+  <!-- Short hair (slightly receded at temples) -->
+  <ellipse cx="100" cy="56" rx="44" ry="11" fill="#180600"/>
+  <rect x="56" y="56" width="88" height="25" fill="#180600"/>
+  <path d="M56,81 C56,62 70,52 100,52 C130,52 144,62 144,81Z" fill="#180600"/>
+  <!-- Eyebrows -->
+  <path d="M74,84 C79,80 88,79 93,82" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M107,82 C112,79 121,80 126,84" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Glasses frame -->
+  <rect x="68" y="85" width="26" height="18" rx="5" fill="none" stroke="#3A2A1A" stroke-width="2.5"/>
+  <rect x="106" y="85" width="26" height="18" rx="5" fill="none" stroke="#3A2A1A" stroke-width="2.5"/>
+  <line x1="94" y1="93" x2="106" y2="93" stroke="#3A2A1A" stroke-width="2"/>
+  <line x1="45" y1="90" x2="68" y2="90" stroke="#3A2A1A" stroke-width="2"/>
+  <line x1="132" y1="90" x2="155" y2="90" stroke="#3A2A1A" stroke-width="2"/>
+  <!-- Eyes inside glasses -->
+  <circle cx="81" cy="93" r="5.5" fill="#180600"/>
+  <circle cx="119" cy="93" r="5.5" fill="#180600"/>
+  <circle cx="83" cy="91" r="2" fill="white"/>
+  <circle cx="121" cy="91" r="2" fill="white"/>
+  <!-- Nose -->
+  <circle cx="96" cy="110" r="2.8" fill="#906020"/>
+  <circle cx="104" cy="110" r="2.8" fill="#906020"/>
+  <path d="M94,112 C97,116 103,116 106,112" stroke="#906020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M87,123 C93,129 107,129 113,123" stroke="#8B3820" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#7A5A30"/>
+  <!-- Shirt -->
+  <path d="M18,200 C18,158 58,142 100,142 C142,142 182,158 182,200Z" fill="#5A4020"/>
+  <!-- Neck -->
+  <rect x="87" y="126" width="26" height="20" rx="4" fill="#B87038"/>
+  <!-- Shoulder-length hair behind -->
+  <path d="M52,86 C52,58 70,44 100,44 C130,44 148,58 148,86 L147,112 C145,132 140,148 132,155 C116,160 84,160 68,155 C60,148 55,132 53,112Z" fill="#180600"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="98" rx="47" ry="50" fill="#B87038"/>
+  <!-- Ears -->
+  <path d="M53,90 C46,92 43,100 43,104 C43,108 46,114 53,114 C55,106 55,96 53,90Z" fill="#A06028"/>
+  <path d="M147,90 C154,92 157,100 157,104 C157,108 154,114 147,114 C145,106 145,96 147,90Z" fill="#A06028"/>
+  <!-- Hair top -->
+  <ellipse cx="100" cy="54" rx="47" ry="12" fill="#180600"/>
+  <rect x="53" y="54" width="94" height="26" fill="#180600"/>
+  <!-- Centre part line -->
+  <line x1="100" y1="50" x2="100" y2="70" stroke="#281000" stroke-width="1.5"/>
+  <!-- Eyebrows (arched) -->
+  <path d="M74,84 C79,79 88,78 94,82" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M106,82 C112,78 121,79 126,84" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="83" cy="93" rx="10" ry="9" fill="white"/>
+  <ellipse cx="117" cy="93" rx="10" ry="9" fill="white"/>
+  <circle cx="84" cy="93" r="6" fill="#180600"/>
+  <circle cx="118" cy="93" r="6" fill="#180600"/>
+  <circle cx="86" cy="91" r="2" fill="white"/>
+  <circle cx="120" cy="91" r="2" fill="white"/>
+  <!-- Nose -->
+  <circle cx="96" cy="108" r="2.8" fill="#8A5020"/>
+  <circle cx="104" cy="108" r="2.8" fill="#8A5020"/>
+  <path d="M94,110 C97,114 103,114 106,110" stroke="#8A5020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M87,121 C93,127 107,127 113,121" stroke="#804018" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Earrings (small studs) -->
+  <circle cx="53" cy="104" r="2.5" fill="#FFD700"/>
+  <circle cx="147" cy="104" r="2.5" fill="#FFD700"/>
+</svg>

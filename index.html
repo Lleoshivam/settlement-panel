@@ -912,11 +912,14 @@
       .faq {
         background: var(--white);
       }
+      .contact-row {
+        background: var(--white);
+      }
       .faq-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        margin-top: 48px;
+        margin-top: 0;
       }
       .faq-list {
         display: flex;
@@ -1032,7 +1035,9 @@
         color: var(--text-dark);
         background: white;
         outline: none;
-        transition: border-color 0.2s, box-shadow 0.2s;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
       }
       .contact-form input:focus,
       .contact-form textarea:focus {
@@ -1053,7 +1058,9 @@
         font-size: 0.95rem;
         font-weight: 700;
         cursor: pointer;
-        transition: background 0.2s, transform 0.2s;
+        transition:
+          background 0.2s,
+          transform 0.2s;
         box-shadow: 0 4px 16px rgba(34, 85, 176, 0.25);
         display: flex;
         align-items: center;
@@ -1100,7 +1107,6 @@
 
       /* ─── FULL-WIDTH FAQ BELOW ─── */
       .faq-full {
-        margin-top: 60px;
         border-top: 1.5px solid var(--border);
         padding-top: 52px;
       }
@@ -1436,6 +1442,89 @@
         padding-bottom: 20px;
         border-bottom: 1px solid var(--border);
       }
+      /* ─── ABOUT US ─── */
+      .about-us {
+        padding: 80px 5%;
+        background: var(--white);
+      }
+      .about-us-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .about-us-text .section-tag {
+        margin-bottom: 14px;
+      }
+      .about-us-text .section-title {
+        margin-bottom: 18px;
+      }
+      .about-us-text p {
+        color: var(--text-mid);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 14px;
+      }
+      .about-commitments {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .about-commit-item {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        padding: 18px 20px;
+        background: var(--bg-light);
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .about-commit-item:hover {
+        border-color: var(--secondary);
+        box-shadow: var(--shadow-sm);
+      }
+      .about-commit-icon {
+        width: 40px;
+        height: 40px;
+        background: var(--secondary-light);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--secondary);
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .about-commit-item h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 4px;
+        line-height: 1.3;
+      }
+      .about-commit-item p {
+        font-size: 0.82rem;
+        color: var(--text-light);
+        line-height: 1.6;
+        margin: 0;
+      }
+      @media (max-width: 900px) {
+        .about-us-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+      @media (max-width: 520px) {
+        .about-us {
+          padding: 60px 5%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1450,10 +1539,11 @@
         <span class="nav-brand-name">SETTLEMENT PANEL</span>
       </a>
       <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#why">Why Us</a></li>
-        <!-- <li><a href="#testimonials">Reviews</a></li> -->
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
       <a
@@ -1470,10 +1560,11 @@
 
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="toggleMenu()">About Us</a>
       <a href="#services" onclick="toggleMenu()">Services</a>
       <a href="#process" onclick="toggleMenu()">How It Works</a>
       <a href="#why" onclick="toggleMenu()">Why Us</a>
-      <!-- <a href="#testimonials" onclick="toggleMenu()">Reviews</a> -->
+      <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
       <a href="#faq" onclick="toggleMenu()">FAQ</a>
       <a
         href="https://wa.me/919205102515"
@@ -1680,6 +1771,85 @@
       </div>
     </div>
 
+    <!-- ABOUT US -->
+    <section class="about-us" id="about">
+      <div class="about-us-inner">
+        <div class="about-us-text">
+          <div class="section-tag">About Us</div>
+          <h2 class="section-title">
+            We Help You <span>Settle Debt,<br />Not Just Survive It</span>
+          </h2>
+          <p>
+            Settlement Panel is a team of legal and financial experts dedicated
+            to helping individuals and businesses resolve unsecured loan
+            defaults. We step in when banks, NBFCs, and recovery agencies become
+            overwhelming and guide you through every step of the settlement
+            process.
+          </p>
+          <p>
+            Our approach is built on transparency, legal expertise, and results.
+            We do not just negotiate — we protect your rights, stop illegal
+            harassment, and help you get back on track.
+          </p>
+          <p>
+            Whether you are dealing with a single personal loan or multiple
+            debts across lenders, we assess your situation and create a clear,
+            actionable plan tailored to you.
+          </p>
+        </div>
+        <div class="about-commitments">
+          <div class="about-commit-item">
+            <div class="about-commit-icon"><i class="fas fa-comments"></i></div>
+            <div>
+              <h4>Free Initial Consultation</h4>
+              <p>
+                Your first call with our team costs nothing. We review your
+                situation honestly and tell you exactly what is possible before
+                you commit to anything.
+              </p>
+            </div>
+          </div>
+          <div class="about-commit-item">
+            <div class="about-commit-icon">
+              <i class="fas fa-indian-rupee-sign"></i>
+            </div>
+            <div>
+              <h4>You Pay Only When We Deliver</h4>
+              <p>
+                Our fee is commission-based. We earn only after your loan is
+                successfully settled. No settlement, no fee — our interests are
+                fully aligned with yours.
+              </p>
+            </div>
+          </div>
+          <div class="about-commit-item">
+            <div class="about-commit-icon"><i class="fas fa-bell"></i></div>
+            <div>
+              <h4>No Surprises, Ever</h4>
+              <p>
+                Every update, every negotiation outcome, every response from the
+                bank — you are informed at each step. We never take action
+                without keeping you in the loop.
+              </p>
+            </div>
+          </div>
+          <div class="about-commit-item">
+            <div class="about-commit-icon">
+              <i class="fas fa-user-lock"></i>
+            </div>
+            <div>
+              <h4>Strict Confidentiality</h4>
+              <p>
+                Your personal and financial details are handled with complete
+                discretion. We never share your information with any third party
+                under any circumstance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SERVICES -->
     <section class="services" id="services">
       <div class="text-center">
@@ -1835,7 +2005,7 @@
         </div>
 
         <!-- Card 2: Legal Drafting -->
-        <div class="service-card">
+        <!-- <div class="service-card">
           <div class="service-card-img">
             <svg
               viewBox="0 0 300 200"
@@ -2060,7 +2230,7 @@
               replies to bank notices.
             </p>
           </div>
-        </div>
+        </div> -->
 
         <!-- Card 3: Bank Communication -->
         <div class="service-card">
@@ -2436,6 +2606,286 @@
             </p>
           </div>
         </div>
+
+        <!-- Card 5: Protection Against Harassment -->
+        <div class="service-card">
+          <div class="service-card-img">
+            <svg
+              viewBox="0 0 300 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="bg5"
+                  x1="0"
+                  y1="0"
+                  x2="300"
+                  y2="200"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#f0f5ff" />
+                  <stop offset="1" stop-color="#e8f5e9" />
+                </linearGradient>
+                <linearGradient
+                  id="sh5"
+                  x1="150"
+                  y1="22"
+                  x2="150"
+                  y2="162"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#43a047" />
+                  <stop offset="1" stop-color="#1b5e20" />
+                </linearGradient>
+              </defs>
+              <rect width="300" height="200" fill="url(#bg5)" />
+              <ellipse
+                cx="150"
+                cy="96"
+                rx="62"
+                ry="68"
+                fill="white"
+                opacity="0.4"
+              />
+              <!-- Shield -->
+              <path
+                d="M150,22 L194,44 L194,94 C194,128 174,154 150,167 C126,154 106,128 106,94 L106,44 Z"
+                fill="url(#sh5)"
+              />
+              <path
+                d="M150,32 L186,51 L186,94 C186,124 169,147 150,159 C131,147 114,124 114,94 L114,51 Z"
+                fill="white"
+                opacity="0.08"
+              />
+              <!-- Checkmark -->
+              <path
+                d="M134,92 L146,107 L170,76"
+                stroke="white"
+                stroke-width="5.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+              <!-- Left: blocked phone -->
+              <rect
+                x="28"
+                y="68"
+                width="52"
+                height="50"
+                rx="10"
+                fill="white"
+                stroke="#e2e8f0"
+                stroke-width="1.5"
+              />
+              <path
+                d="M44,82 C44,78 56,76 58,80 L61,86 C61,86 57,89 58,92 C59,95 66,101 69,102 C72,103 74,100 74,100 L77,103 C81,107 77,111 77,111 C72,116 44,99 44,82Z"
+                fill="#94a3b8"
+              />
+              <circle
+                cx="54"
+                cy="93"
+                r="20"
+                stroke="#ef4444"
+                stroke-width="3"
+                fill="none"
+                opacity="0.85"
+              />
+              <line
+                x1="39"
+                y1="78"
+                x2="69"
+                y2="108"
+                stroke="#ef4444"
+                stroke-width="3"
+                stroke-linecap="round"
+                opacity="0.85"
+              />
+              <!-- Arrow left → shield (blocked) -->
+              <path
+                d="M82,90 L103,90"
+                stroke="#ef4444"
+                stroke-width="1.5"
+                stroke-dasharray="3,3"
+                opacity="0.5"
+              />
+              <polygon
+                points="103,87 110,90 103,93"
+                fill="#ef4444"
+                opacity="0.5"
+              />
+              <!-- Right: blocked agent -->
+              <rect
+                x="220"
+                y="68"
+                width="52"
+                height="50"
+                rx="10"
+                fill="white"
+                stroke="#e2e8f0"
+                stroke-width="1.5"
+              />
+              <circle cx="246" cy="84" r="9" fill="#94a3b8" />
+              <path d="M233,115 C233,103 259,103 259,115" fill="#94a3b8" />
+              <circle
+                cx="246"
+                cy="93"
+                r="20"
+                stroke="#ef4444"
+                stroke-width="3"
+                fill="none"
+                opacity="0.85"
+              />
+              <line
+                x1="231"
+                y1="78"
+                x2="261"
+                y2="108"
+                stroke="#ef4444"
+                stroke-width="3"
+                stroke-linecap="round"
+                opacity="0.85"
+              />
+              <!-- Arrow right → shield (blocked) -->
+              <path
+                d="M218,90 L197,90"
+                stroke="#ef4444"
+                stroke-width="1.5"
+                stroke-dasharray="3,3"
+                opacity="0.5"
+              />
+              <polygon
+                points="197,87 190,90 197,93"
+                fill="#ef4444"
+                opacity="0.5"
+              />
+              <!-- Badge -->
+              <rect
+                x="108"
+                y="172"
+                width="84"
+                height="20"
+                rx="10"
+                fill="#e8f5e9"
+                stroke="#c8e6c9"
+                stroke-width="1"
+              />
+              <text
+                x="150"
+                y="186"
+                text-anchor="middle"
+                font-size="8.5"
+                fill="#2e7d32"
+                font-weight="bold"
+                font-family="Arial, sans-serif"
+              >
+                YOU ARE PROTECTED
+              </text>
+            </svg>
+          </div>
+          <div class="service-card-body">
+            <h3>Protection Against Harassment</h3>
+            <p>
+              We stop illegal recovery calls, agent visits, and threats by
+              sending legal notices and filing RBI complaints on your behalf.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-row" id="contact">
+      <div class="faq-grid">
+        <!-- Get in Touch Form -->
+        <div class="get-in-touch">
+          <div class="section-tag">GET IN TOUCH</div>
+          <h2>Let's <span>Connect</span></h2>
+          <p>
+            Have a question about your loan situation? Drop us a message and our
+            experts will get back to you shortly — no fees, no obligations.
+          </p>
+          <form class="contact-form" onsubmit="handleContactForm(event)">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Contact Number"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your message or query..."
+            ></textarea>
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Thank you! We'll reach out to
+            you soon.
+          </div>
+          <div class="form-error" id="formError">
+            <i class="fas fa-exclamation-circle"></i> Something went wrong.
+            Please try again or call us directly.
+          </div>
+        </div>
+
+        <!-- Free Consultation CTA -->
+        <div class="faq-cta">
+          <div style="font-size: 3rem; margin-bottom: 16px">📞</div>
+          <h3>Get Your Free Consultation</h3>
+          <p>
+            Speak to our experts today. No fees, no obligations — just honest
+            advice on how we can help you.
+          </p>
+          <a
+            href="tel:+919205102515"
+            class="btn-primary"
+            target="_blank"
+            style="
+              margin-bottom: 16px;
+              display: inline-flex;
+              background: var(--secondary);
+              box-shadow: 0 4px 16px rgba(26, 58, 110, 0.3);
+            "
+          >
+            <i class="fas fa-phone-alt"></i> Get Your Free Consultation
+          </a>
+          <br />
+          <a
+            href="https://wa.me/919205102515"
+            class="btn-whatsapp"
+            target="_blank"
+            style="display: inline-flex; margin-top: 12px"
+          >
+            <i class="fab fa-whatsapp"></i> Chat with Us on WhatsApp
+          </a>
+          <div
+            style="
+              margin-top: 24px;
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              flex-wrap: wrap;
+            "
+          >
+            <div class="trust-item" style="font-size: 0.78rem">
+              <i class="fas fa-check-circle"></i> Free Consultation
+            </div>
+            <div class="trust-item" style="font-size: 0.78rem">
+              <i class="fas fa-lock"></i> 100% Confidential
+            </div>
+            <div class="trust-item" style="font-size: 0.78rem">
+              <i class="fas fa-shield-alt"></i> No Hidden Fees
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -2575,7 +3025,6 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS (commented out — re-enable when needed)
     <section class="testimonials" id="testimonials">
       <div class="text-center">
         <div class="section-tag">Client Reviews</div>
@@ -2588,457 +3037,12 @@
       </div>
 
       <div class="testimonials-slider">
-        <div class="testimonials-track">
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "They reduced my outstanding loan by nearly 60%. The team handled
-              every call with the bank so I didn't have to. Highly recommended
-              to anyone struggling with EMIs."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/75.jpg"
-                alt="Rahul S."
-              />
-              <div>
-                <div class="author-name">Rahul S.</div>
-                <div class="author-detail">Personal Loan Default, Mumbai</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹3.2L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "The bank harassment stopped completely once Settlement Panel
-              stepped in. They drafted the legal reply and got me a settlement
-              within 45 days. Life-changing."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Priya G."
-              />
-              <div>
-                <div class="author-name">Priya G.</div>
-                <div class="author-detail">Credit Card Debt, Delhi</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹1.8L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "I had a business loan I couldn't repay after COVID. They
-              negotiated brilliantly and settled it for a fraction. Transparent
-              process throughout. No hidden surprises."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/46.jpg"
-                alt="Amit K."
-              />
-              <div>
-                <div class="author-name">Amit K.</div>
-                <div class="author-detail">Business Loan, Bangalore</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹5.1L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "I was scared to even open bank letters. Their team took over
-              everything — replied to notices, negotiated, and got a settlement
-              done. Truly God-sent service."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/women/68.jpg"
-                alt="Sunita M."
-              />
-              <div>
-                <div class="author-name">Sunita M.</div>
-                <div class="author-detail">Home Loan Stress, Pune</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹7.4L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "Multiple loans, multiple banks — they handled everything
-              together. Got me a consolidated settlement offer. Couldn't have
-              done this without their legal expertise."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/36.jpg"
-                alt="Vikram T."
-              />
-              <div>
-                <div class="author-name">Vikram T.</div>
-                <div class="author-detail">Multiple Loans, Hyderabad</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹9.6L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "A recovery agent showed up at my house. I called Debt Relief
-              India the same day. Within a week they had sent a legal notice to
-              the bank. No more visits after that."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/women/26.jpg"
-                alt="Deepa R."
-              />
-              <div>
-                <div class="author-name">Deepa R.</div>
-                <div class="author-detail">NBFC Harassment, Chennai</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹2.3L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "They helped me understand my legal rights first. Then negotiated
-              a 55% settlement with HDFC. Professional, honest, and delivered on
-              every promise they made."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/57.jpg"
-                alt="Suresh P."
-              />
-              <div>
-                <div class="author-name">Suresh P.</div>
-                <div class="author-detail">HDFC Loan Default, Ahmedabad</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹4.5L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "I was about to lose my property to the bank. Settlement Panel
-              filed the right legal documents and stopped the proceedings. My
-              property is safe now. Forever grateful."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/88.jpg"
-                alt="Rajesh N."
-              />
-              <div>
-                <div class="author-name">Rajesh N.</div>
-                <div class="author-detail">Mortgage Default, Jaipur</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹12L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "They reduced my outstanding loan by nearly 60%. The team handled
-              every call with the bank so I didn't have to. Highly recommended
-              to anyone struggling with EMIs."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/75.jpg"
-                alt="Rahul S."
-              />
-              <div>
-                <div class="author-name">Rahul S.</div>
-                <div class="author-detail">Personal Loan Default, Mumbai</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹3.2L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "The bank harassment stopped completely once Settlement Panel
-              stepped in. They drafted the legal reply and got me a settlement
-              within 45 days. Life-changing."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Priya G."
-              />
-              <div>
-                <div class="author-name">Priya G.</div>
-                <div class="author-detail">Credit Card Debt, Delhi</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹1.8L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "I had a business loan I couldn't repay after COVID. They
-              negotiated brilliantly and settled it for a fraction. Transparent
-              process throughout. No hidden surprises."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/46.jpg"
-                alt="Amit K."
-              />
-              <div>
-                <div class="author-name">Amit K.</div>
-                <div class="author-detail">Business Loan, Bangalore</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹5.1L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "I was scared to even open bank letters. Their team took over
-              everything — replied to notices, negotiated, and got a settlement
-              done. Truly God-sent service."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/women/68.jpg"
-                alt="Sunita M."
-              />
-              <div>
-                <div class="author-name">Sunita M.</div>
-                <div class="author-detail">Home Loan Stress, Pune</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹7.4L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "Multiple loans, multiple banks — they handled everything
-              together. Got me a consolidated settlement offer. Couldn't have
-              done this without their legal expertise."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/36.jpg"
-                alt="Vikram T."
-              />
-              <div>
-                <div class="author-name">Vikram T.</div>
-                <div class="author-detail">Multiple Loans, Hyderabad</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹9.6L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "A recovery agent showed up at my house. I called Debt Relief
-              India the same day. Within a week they had sent a legal notice to
-              the bank. No more visits after that."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/women/26.jpg"
-                alt="Deepa R."
-              />
-              <div>
-                <div class="author-name">Deepa R.</div>
-                <div class="author-detail">NBFC Harassment, Chennai</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹2.3L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "They helped me understand my legal rights first. Then negotiated
-              a 55% settlement with HDFC. Professional, honest, and delivered on
-              every promise they made."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/57.jpg"
-                alt="Suresh P."
-              />
-              <div>
-                <div class="author-name">Suresh P.</div>
-                <div class="author-detail">HDFC Loan Default, Ahmedabad</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹4.5L
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              "I was about to lose my property to the bank. Settlement Panel
-              filed the right legal documents and stopped the proceedings. My
-              property is safe now. Forever grateful."
-            </blockquote>
-            <div class="testimonial-author">
-              <img
-                class="author-avatar"
-                src="https://randomuser.me/api/portraits/men/88.jpg"
-                alt="Rajesh N."
-              />
-              <div>
-                <div class="author-name">Rajesh N.</div>
-                <div class="author-detail">Mortgage Default, Jaipur</div>
-              </div>
-              <div class="testimonial-result" style="margin-left: auto">
-                Saved ₹12L
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="testimonials-track" id="testimonialsTrack"></div>
       </div>
     </section>
-    -->
 
-    <!-- FAQ & CONTACT -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
-
-      <!-- Top row: Get in Touch form + Free Consultation box -->
-      <div class="faq-grid">
-
-        <!-- Get in Touch Form -->
-        <div class="get-in-touch">
-          <div class="section-tag">GET IN TOUCH</div>
-          <h2>Let's <span>Connect</span></h2>
-          <p>Have a question about your loan situation? Drop us a message and our experts will get back to you shortly — no fees, no obligations.</p>
-          <form class="contact-form" onsubmit="handleContactForm(event)">
-            <input type="text" name="name" placeholder="Your Full Name" required />
-            <input type="tel" name="phone" placeholder="Contact Number" required />
-            <textarea name="message" placeholder="Your message or query..."></textarea>
-            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-          </form>
-          <div class="form-success" id="formSuccess">
-            <i class="fas fa-check-circle"></i> Thank you! We'll reach out to you soon.
-          </div>
-          <div class="form-error" id="formError">
-            <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again or call us directly.
-          </div>
-        </div>
-
-        <!-- Free Consultation CTA -->
-        <div class="faq-cta" id="contact">
-          <div style="font-size: 3rem; margin-bottom: 16px">📞</div>
-          <h3>Get Your Free Consultation</h3>
-          <p>
-            Speak to our experts today. No fees, no obligations — just honest
-            advice on how we can help you.
-          </p>
-          <a
-            href="tel:+919205102515"
-            class="btn-primary"
-            target="_blank"
-            style="
-              margin-bottom: 16px;
-              display: inline-flex;
-              background: var(--secondary);
-              box-shadow: 0 4px 16px rgba(26, 58, 110, 0.3);
-            "
-          >
-            <i class="fas fa-phone-alt"></i> Get Your Free Consultation
-          </a>
-          <br />
-          <a
-            href="https://wa.me/919205102515"
-            class="btn-whatsapp"
-            target="_blank"
-            style="display: inline-flex; margin-top: 12px"
-          >
-            <i class="fab fa-whatsapp"></i> Chat with Us on WhatsApp
-          </a>
-          <div
-            style="
-              margin-top: 24px;
-              display: flex;
-              justify-content: center;
-              gap: 20px;
-              flex-wrap: wrap;
-            "
-          >
-            <div class="trust-item" style="font-size: 0.78rem">
-              <i class="fas fa-check-circle"></i> Free Consultation
-            </div>
-            <div class="trust-item" style="font-size: 0.78rem">
-              <i class="fas fa-lock"></i> 100% Confidential
-            </div>
-            <div class="trust-item" style="font-size: 0.78rem">
-              <i class="fas fa-shield-alt"></i> No Hidden Fees
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Full-width FAQ below -->
       <div class="faq-full">
         <div class="section-tag">FAQ</div>
         <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
@@ -3064,8 +3068,8 @@
             <div class="faq-answer">
               A settled loan may temporarily impact your CIBIL score. However,
               we guide you on how to rebuild your credit after settlement. For
-              most clients, relief from debt far outweighs the short-term
-              score impact.
+              most clients, relief from debt far outweighs the short-term score
+              impact.
             </div>
           </div>
           <div class="faq-item">
@@ -3085,9 +3089,9 @@
               <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-              We work with all major public and private sector banks, NBFCs,
-              and digital lenders including SBI, HDFC, ICICI, Axis, Bajaj
-              Finance, IDFC, and many more.
+              We work with all major public and private sector banks, NBFCs, and
+              digital lenders including SBI, HDFC, ICICI, Axis, Bajaj Finance,
+              IDFC, and many more.
             </div>
           </div>
           <div class="faq-item">
@@ -3107,10 +3111,9 @@
               <i class="fas fa-chevron-down"></i>
             </div>
             <div class="faq-answer">
-              Personal loans, credit card dues, home loans, car loans, business
-              loans, and education loans can all be negotiated for settlement.
-              Our experts assess each case individually to find the best path
-              forward.
+              We specialise in unsecured loans i.e personal loans, credit card
+              dues. If you are unsure whether your loan qualifies, reach out to
+              us for a free assessment.
             </div>
           </div>
           <div class="faq-item">
@@ -3133,8 +3136,8 @@
             <div class="faq-answer">
               Basic KYC documents, loan account statements, and an overview of
               your current financial situation are usually sufficient to begin.
-              Our team will guide you through the exact requirements during
-              your free consultation.
+              Our team will guide you through the exact requirements during your
+              free consultation.
             </div>
           </div>
           <div class="faq-item">
@@ -3162,7 +3165,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- FINAL CTA -->

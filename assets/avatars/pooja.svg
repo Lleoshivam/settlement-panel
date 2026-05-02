@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#6A4A9A"/>
+  <!-- Shirt / kurta -->
+  <path d="M18,200 C18,158 58,142 100,142 C142,142 182,158 182,200Z" fill="#523880"/>
+  <!-- Neck -->
+  <rect x="87" y="126" width="26" height="20" rx="4" fill="#C07840"/>
+  <!-- Hair behind - pulled back low -->
+  <path d="M53,86 C53,58 70,44 100,44 C130,44 147,58 147,86 C147,78 145,64 100,62 C55,64 53,78 53,86Z" fill="#180600"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="98" rx="47" ry="50" fill="#C07840"/>
+  <!-- Ears -->
+  <path d="M53,90 C46,92 43,100 43,104 C43,108 46,114 53,114 C55,106 55,96 53,90Z" fill="#A86030"/>
+  <path d="M147,90 C154,92 157,100 157,104 C157,108 154,114 147,114 C145,106 145,96 147,90Z" fill="#A86030"/>
+  <!-- Hair top / centre parting -->
+  <ellipse cx="100" cy="54" rx="47" ry="12" fill="#180600"/>
+  <rect x="53" y="54" width="94" height="26" fill="#180600"/>
+  <!-- Hair bun on top -->
+  <ellipse cx="100" cy="42" rx="20" ry="13" fill="#180600"/>
+  <ellipse cx="100" cy="36" rx="14" ry="10" fill="#281000"/>
+  <!-- Bindi -->
+  <circle cx="100" cy="79" r="4" fill="#CC0000"/>
+  <!-- Eyebrows -->
+  <path d="M74,84 C79,80 88,79 93,82" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M107,82 C112,79 121,80 126,84" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="83" cy="93" rx="10" ry="9" fill="white"/>
+  <ellipse cx="117" cy="93" rx="10" ry="9" fill="white"/>
+  <circle cx="84" cy="93" r="6" fill="#180600"/>
+  <circle cx="118" cy="93" r="6" fill="#180600"/>
+  <circle cx="86" cy="91" r="2" fill="white"/>
+  <circle cx="120" cy="91" r="2" fill="white"/>
+  <!-- Nose -->
+  <circle cx="96" cy="108" r="2.8" fill="#906020"/>
+  <circle cx="104" cy="108" r="2.8" fill="#906020"/>
+  <path d="M94,110 C97,114 103,114 106,110" stroke="#906020" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M87,121 C93,127 107,127 113,121" stroke="#8B3820" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Earrings -->
+  <circle cx="53" cy="104" r="3.5" fill="#FFD700"/>
+  <circle cx="147" cy="104" r="3.5" fill="#FFD700"/>
+  <line x1="53" y1="107" x2="53" y2="113" stroke="#FFD700" stroke-width="2"/>
+  <circle cx="53" cy="114" r="2" fill="#FFD700"/>
+  <line x1="147" y1="107" x2="147" y2="113" stroke="#FFD700" stroke-width="2"/>
+  <circle cx="147" cy="114" r="2" fill="#FFD700"/>
+</svg>

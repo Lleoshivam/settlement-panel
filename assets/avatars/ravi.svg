@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#8A4A20"/>
+  <!-- Shirt -->
+  <path d="M18,200 C18,158 58,142 100,142 C142,142 182,158 182,200Z" fill="#6A3410"/>
+  <polygon points="88,142 100,160 112,142" fill="#F0F0F0"/>
+  <!-- Neck -->
+  <rect x="87" y="126" width="26" height="20" rx="4" fill="#A86028"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="98" rx="47" ry="50" fill="#A86028"/>
+  <!-- Ears -->
+  <path d="M53,90 C46,92 43,100 43,104 C43,108 46,114 53,114 C55,106 55,96 53,90Z" fill="#905020"/>
+  <path d="M147,90 C154,92 157,100 157,104 C157,108 154,114 147,114 C145,106 145,96 147,90Z" fill="#905020"/>
+  <!-- Short hair -->
+  <ellipse cx="100" cy="54" rx="47" ry="12" fill="#100400"/>
+  <rect x="53" y="54" width="94" height="28" fill="#100400"/>
+  <path d="M53,82 C53,60 68,50 100,50 C132,50 147,60 147,82Z" fill="#100400"/>
+  <!-- Eyebrows (thicker) -->
+  <path d="M73,84 C78,79 88,78 94,81" stroke="#100400" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M106,81 C112,78 122,79 127,84" stroke="#100400" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="83" cy="93" rx="10" ry="9" fill="white"/>
+  <ellipse cx="117" cy="93" rx="10" ry="9" fill="white"/>
+  <circle cx="84" cy="93" r="6" fill="#180600"/>
+  <circle cx="118" cy="93" r="6" fill="#180600"/>
+  <circle cx="86" cy="91" r="2" fill="white"/>
+  <circle cx="120" cy="91" r="2" fill="white"/>
+  <!-- Nose -->
+  <circle cx="96" cy="108" r="2.8" fill="#784018"/>
+  <circle cx="104" cy="108" r="2.8" fill="#784018"/>
+  <path d="M94,110 C97,114 103,114 106,110" stroke="#784018" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mustache -->
+  <path d="M84,120 C90,116 100,115 116,120 C110,124 90,124 84,120Z" fill="#100400"/>
+  <!-- Mouth below mustache -->
+  <path d="M89,127 C94,132 106,132 111,127" stroke="#7A3818" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</svg>

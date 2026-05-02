@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="100" fill="#8A3040"/>
+  <!-- Shirt -->
+  <path d="M18,200 C18,158 58,142 100,142 C142,142 182,158 182,200Z" fill="#6A2030"/>
+  <!-- Neck -->
+  <rect x="87" y="126" width="26" height="20" rx="4" fill="#A86028"/>
+  <!-- Long wavy hair behind -->
+  <path d="M52,86 C52,58 70,44 100,44 C130,44 148,58 148,86 L147,116 C145,140 136,162 124,170 C110,175 90,175 76,170 C64,162 55,140 53,116Z" fill="#180600"/>
+  <!-- Side wave detail left -->
+  <path d="M52,100 C46,108 46,120 50,130 C54,138 60,145 65,150" stroke="#100400" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Side wave detail right -->
+  <path d="M148,100 C154,108 154,120 150,130 C146,138 140,145 135,150" stroke="#100400" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="98" rx="47" ry="50" fill="#A86028"/>
+  <!-- Ears -->
+  <path d="M53,90 C46,92 43,100 43,104 C43,108 46,114 53,114 C55,106 55,96 53,90Z" fill="#905020"/>
+  <path d="M147,90 C154,92 157,100 157,104 C157,108 154,114 147,114 C145,106 145,96 147,90Z" fill="#905020"/>
+  <!-- Hair top -->
+  <ellipse cx="100" cy="54" rx="47" ry="12" fill="#180600"/>
+  <rect x="53" y="54" width="94" height="26" fill="#180600"/>
+  <!-- Eyebrows -->
+  <path d="M74,84 C79,80 88,79 93,82" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M107,82 C112,79 121,80 126,84" stroke="#180600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <ellipse cx="83" cy="93" rx="10" ry="9" fill="white"/>
+  <ellipse cx="117" cy="93" rx="10" ry="9" fill="white"/>
+  <circle cx="84" cy="93" r="6" fill="#180600"/>
+  <circle cx="118" cy="93" r="6" fill="#180600"/>
+  <circle cx="86" cy="91" r="2" fill="white"/>
+  <circle cx="120" cy="91" r="2" fill="white"/>
+  <!-- Nose -->
+  <circle cx="96" cy="108" r="2.8" fill="#784018"/>
+  <circle cx="104" cy="108" r="2.8" fill="#784018"/>
+  <path d="M94,110 C97,114 103,114 106,110" stroke="#784018" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M87,121 C93,127 107,127 113,121" stroke="#7A2818" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Earrings -->
+  <circle cx="53" cy="106" r="3" fill="#FFD700"/>
+  <circle cx="147" cy="106" r="3" fill="#FFD700"/>
+</svg>
